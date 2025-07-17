@@ -332,3 +332,56 @@ body {
 
 
 
+
+
+
+/* ======= Media Queries para Responsividade ======= */
+@media (max-width: 768px) {
+    
+     .container-header {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Logo e menu móvel */
+        
+        
+    }
+    
+    .logo-direita {
+        flex-direction: column; /* Organiza o logo e o subtítulo em linha */
+        align-items: center; /* Alinha o logo e o subtítulo verticalmente */
+        height: 50px; /* Reduz o tamanho do logo em telas menores */
+        width: auto;
+    }
+    
+    
+    
+    .logo-subtitle {
+        display: none; /* Oculta o subtítulo em telas menores */
+    }
+    
+   
+    
+    .menu-header {
+        display: none; /* Oculta o menu principal em telas menores */
+    }
+    
+    .btn-primary, .btn-secondary {
+        display: none; /* Oculta os botões de autenticação em telas menores */
+    }
+    
+    .menu-mobile {
+        display: flex; /* Exibe o menu móvel */
+        align-items: center;
+    }
+    
+    .btn-menu-hiden  {
+        align-items: center;
+    }
+    
+    .btn-menu-hiden .bi {
+        font-size: 2rem;
+        
+    }
+    
+}
+

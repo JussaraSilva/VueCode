@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="../assets/img/logo/symbol-vuecode.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/style-base.css">
 
@@ -23,9 +25,10 @@
 
     <!------Cabeçalho Site------------------------------->
 
-    <header class="cabecalho-site">
-    <div class="container-header">
-
+<header class="cabecalho-site">
+    <nav class="container-header">
+        
+        <!------- Menu Mobile Oculto------------>
         <div class="logo-direita">
             <div class="container-img">
                 <a href="./index.html">
@@ -53,7 +56,7 @@
                 </ul>
             </div>
         </div>
-
+        
         <div class="botoes-esquerda">
             <div class="botao-login">
                 <button class="login-button btn btn-secondary" onclick="openLoginModal()">
@@ -68,8 +71,15 @@
                 </button>
             </div>
         </div>
-    </div>
+        <div class="menu-mobile">
+            <button class="btn btn-menu-hiden" onclick="toggleMobileMenu()">
+                <i class="bi bi-list"></i>
+            </button>
+        </div>
+    </nav>
 </header>
+
+<!-----------------Modal Login e Cadastro------------------------------>
     
 
 
