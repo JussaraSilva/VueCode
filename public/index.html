@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/style-base.css">
+
+    <!-----------------Icons BootsTrap e FontAwesome---------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!--------------------Fontes Questrial e Raleway----------------------------------->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>VueCode - Editor Online</title>
+</head>
+<body>
+
+    <!------Cabeçalho Site------------------------------->
+
+    <header class="cabecalho-site">
+    <div class="container-header">
+
+        <div class="logo-direita">
+            <div class="container-img">
+                <a href="./index.html">
+                    <img src="../assets/img/logo/azul-fundo-transparente.webp" alt="VueCode Logo"> 
+                </a>
+            </div>
+            <span class="logo-subtitle">Codifique enquanto assiste, aprenda enquanto constrói.</span>
+        </div>
+
+        <div class="menu-centro">
+            <div class="container-menu">
+                <ul class="menu-header">
+                    <li>
+                        <a href="./index.html">Início</a>
+                    </li>
+                    <li>
+                        <a href="#recursos">Recursos</a> 
+                    </li>
+                    <li>
+                        <a href="#sobre">Sobre</a> 
+                    </li>
+                    <li>
+                        <a href="#contato">Contato</a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="botoes-esquerda">
+            <div class="botao-login">
+                <button class="login-button btn btn-secondary" onclick="openLoginModal()">
+                    <i class="bi bi-person-circle"></i> 
+                    <span>Entrar</span>
+                </button>
+            </div>
+            <div class="botao-cadastro">
+                <button class="cadastro-button btn btn-primary" onclick="openRegisterModal()">
+                    <i class="bi bi-person-vcard-fill"></i>
+                    <span>Cadastre-se</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+    
+
+
+
+    <script src="../js/script-base.js"></script>
+</body>
+</html>
