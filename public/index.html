@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="icon" href="../assets/img/logo/symbol-vuecode.svg" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/style-base.css">
@@ -11,79 +12,243 @@
     <!-----------------Icons BootsTrap e FontAwesome---------------------->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
     <!--------------------Fontes Questrial e Raleway----------------------------------->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <title>VueCode - Editor Online</title>
 </head>
+
 <body>
 
     <!------Cabeçalho Site------------------------------->
 
-<header class="cabecalho-site">
-    <nav class="container-header">
-        
-        <!------- Menu Mobile Oculto------------>
-        <div class="logo-direita">
-            <div class="container-img">
-                <a href="./index.html">
-                    <img src="../assets/img/logo/azul-fundo-transparente.webp" alt="VueCode Logo"> 
-                </a>
-            </div>
-            <span class="logo-subtitle">Codifique enquanto assiste, aprenda enquanto constrói.</span>
-        </div>
+    <header class="cabecalho-site">
+        <nav class="container-header">
 
-        <div class="menu-centro">
-            <div class="container-menu">
-                <ul class="menu-header">
-                    <li>
-                        <a href="./index.html">Início</a>
-                    </li>
-                    <li>
-                        <a href="#recursos">Recursos</a> 
-                    </li>
-                    <li>
-                        <a href="#sobre">Sobre</a> 
-                    </li>
-                    <li>
-                        <a href="#contato">Contato</a> 
-                    </li>
-                </ul>
+            <!------- Menu Mobile Oculto------------>
+            <div class="logo-direita">
+                <div class="container-img">
+                    <a href="./index.html">
+                        <img src="../assets/img/logo/azul-fundo-transparente.webp" alt="VueCode Logo">
+                    </a>
+                </div>
+                <span class="logo-subtitle">Codifique enquanto assiste, aprenda enquanto constrói.</span>
             </div>
-        </div>
-        
-        <div class="botoes-esquerda">
-            <div class="botao-login">
-                <button class="login-button btn btn-secondary" onclick="openLoginModal()">
-                    <i class="bi bi-person-circle"></i> 
-                    <span>Entrar</span>
-                </button>
-            </div>
-            <div class="botao-cadastro">
-                <button class="cadastro-button btn btn-primary" onclick="openRegisterModal()">
-                    <i class="bi bi-person-vcard-fill"></i>
-                    <span>Cadastre-se</span>
-                </button>
-            </div>
-        </div>
-        <div class="menu-mobile">
-            <button class="btn btn-menu-hiden" onclick="toggleMobileMenu()">
-                <i class="bi bi-list"></i>
-            </button>
-        </div>
-    </nav>
-</header>
 
-<!-----------------Modal Login e Cadastro------------------------------>
+            <div class="menu-centro">
+                <div class="container-menu">
+                    <ul class="menu-header">
+                        <li>
+                            <a href="./index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="#recursos">Recursos</a>
+                        </li>
+                        <li>
+                            <a href="#sobre">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="botoes-esquerda">
+                <div class="botao-login">
+                    <button class="login-button btn btn-secondary" onclick="openLoginModal()">
+                        <i class="bi bi-person-circle"></i>
+                        <span>Entrar</span>
+                    </button>
+                </div>
+                <div class="botao-cadastro">
+                    <button class="cadastro-button btn btn-primary" onclick="openRegisterModal()">
+                        <i class="bi bi-person-vcard-fill"></i>
+                        <span>Cadastre-se</span>
+                    </button>
+                </div>
+            </div>
+
+            <!---- Menu Aparece somente em dispositivos móveis------------------>
+            <div class="menu-mobile">
+                <button class="btn-menu-hiden" onclick="toggleMobileMenu()">
+                    <i class="bi bi-list" id="menuIcon"></i>
+                </button>
+
+                <!-- dropdown mobile oculto por padrão -->
+                <div class="mobile-nav" id="mobileNav">
+                    <ul class="mobile-menu-list">
+                        <li><a href="./index.html">Início</a></li>
+                        <li><a href="#recursos">Recursos</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                    <div class="mobile-auth-buttons">
+                        <button class="btn btn-secondary" onclick="openLoginModal()">
+                            <i class="bi bi-person-circle"></i> Entrar
+                        </button>
+                        <button class="btn btn-primary" onclick="openRegisterModal()">
+                            <i class="bi bi-person-vcard-fill"></i> Cadastre-se
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main class="container-site">
+        <section class="header-site section-cabecalhoSite">
+            <div class="cabecalho-content">
+                <div class="text-header-site">
+                    <div class="text-descricaoHeader">
+                        <small>VueCode - A Plataforma All-in-One para Edição de Códigos  com vídeo</small>
+                    </div>
+                    <div class="title-headerSite">
+                        <h1>Codifique enquanto assiste, aprenda enquanto constrói</h1>
+                    </div>
+                    <div class="text-header-site">
+                        <p>VueCode é uma plataforma web que combina edição de código HTML/CSS ao vivo com a integração de vídeos (YouTube), oferecendo uma experiência única para quem aprende e pratica front-end. O usuário pode escrever código, ver o resultado em tempo real e assistir a videoaulas simultaneamente — tudo em uma única interface responsiva e intuitiva.</p>
+                    </div>
+                    <div class="btn-action-header">
+                        <button class="btn readMore-btn">
+                            Saiba Mais
+                        </button>
+                    </div>
+                </div>
+                <div class="container-img-destaque1 container-imgDestaque">
+                    <img class="img-destaques destaque1" src="../assets/img/apresentacao/imagem-destaque1.webp" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-funcionamento">
+            <div class="container-funcionamento">
+                <div class="cabecalho-text">
+                    <div class="title-cabecalho">
+                        <h2>Como VueCode Funciona</h2>
+                    </div>
+                    <div class="subtitulo-cabecalho">
+                        <h4>
+                            A plataforma VueCode oferece uma solução completa para entusiastas e profissionais de desenvolvimento web.                            
+                        </h4>
+                    </div>
+                    <div class="descricao-funcionamento">
+                        <p>Codifique e visualize seu projeto enquanto assiste a tutoriais.
+                            Tudo sincronizado em tempo real para você aprender mais rápido e com mais foco.
+                        </p>
+                    </div>
+                    
+                </div>
+
+                <div class="cards-funcionamento">
+                    <div class="card-container card-container1">
+                        <div class="img-card-funcionamento">
+                            <img class="card-img" src="../assets/img/apresentacao/card-assistir.webp" alt="">
+                        </div>
+                        <span class="title-card">
+                            Assista
+                        </span>
+                        <p class="text-card-funcionamento">
+                            Mergulhe em videoaulas integradas ao editor e aprenda com quem manja do código, sem trocar de aba. É como ter um dev sênior no ombro, explicando cada passo ao vivo — só que sem carregar café pra ele.
+                        </p>
+                    </div>
+
+                    <div class="card-container card-container2">
+                        <div class="img-card-funcionamento">
+                            <img class="img-destaques card-img" src="../assets/img/apresentacao/card-codar.webp" alt="">
+                        </div>
+                        <span class="title-card">
+                            Codifique
+                        </span>
+                        <p class="text-card-funcionamento">
+                            Bateu aquela ideia? Solta os dedos no teclado dentro da mesma interface e veja cada linha de HTML/CSS ganhar vida em tempo real. É zero fricção: edita, testa e refatora na hora, tipo um DJ remixando seu próprio som. 
+                        </p>
+                    </div>
+
+                    <div class="card-container card-container3">
+                        <div class="img-card-funcionamento">
+                            <img class="img-destaques card-img" src="../assets/img/apresentacao/card-resultado.webp" alt="">
+                        </div>
+                        <span class="title-card">
+                            Visualize
+                        </span>
+                        <p class="text-card-funcionamento">
+                            Seu código não é só texto — é experiência. Veja o preview instantâneo lado a lado com o vídeo, para acompanhar cada mudança sem perder o ritmo. Feedback instantâneo pra você nunca ficar no escuro.
+                        </p>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
     
+
+
+
+
+
+
+
+
+
+    <!-----------------Modal Login e Cadastro------------------------------>
+    <!-- Modal Login -->
+    <div id="loginModal" class="modal-overlay" onclick="closeModal(event, 'loginModal')">
+        <div class="modal-content">
+            <!-- exemplo do botão -->
+            <button type="button" class="modal-close" onclick="closeModal(event, 'loginModal')">&times;</button>
+
+            <h2>Entrar</h2>
+            <form id="loginForm">
+                <label for="loginEmail">E-mail</label>
+                <input type="email" id="loginEmail" required>
+                <label for="loginPass">Senha</label>
+                <input type="password" id="loginPass" required>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Cadastro -->
+    <div id="registerModal" class="modal-overlay" onclick="closeModal(event, 'registerModal')">
+        <div class="modal-content">
+            <!-- exemplo do botão -->
+            <button type="button" class="modal-close" onclick="closeModal(event, 'registerModal')">&times;</button>
+
+            <h2>Cadastre-se</h2>
+            <form id="registerForm">
+                <label for="regName">Nome</label>
+                <input type="text" id="regName" required>
+                <label for="regEmail">E-mail</label>
+                <input type="email" id="regEmail" required>
+                <label for="regPass">Senha</label>
+                <input type="password" id="regPass" required>
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 
 
 
     <script src="../js/script-base.js"></script>
 </body>
+
 </html>

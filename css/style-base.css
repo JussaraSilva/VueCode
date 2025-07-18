@@ -1,20 +1,32 @@
 /* ==== RESET BASEADO NO PROJETO DA JU ==== */
 :root {
     /* Cores */
-    --color-primary: #5F40FF; /* Roxo vibrante */
-    --color-secondary: #FFFFFF; /* Branco */
-    --color-text-dark: #333333; /* Preto / Cinza escuro para títulos e corpo principal */
-    --color-text-light: #666666; /* Cinza médio para textos secundários */
-    --color-accent: #00BFFF; /* Azul claro vibrante (provável no gradiente) */
-    --color-border-light: #CCCCCC; /* Cinza claro para bordas/linhas */
+    --color-primary: #5F40FF;
+
+    --color-primary-darkerHover: #3811fa;
+    /* Roxo vibrante */
+    --color-secondary: #FFFFFF;
+    /* Branco */
+    --color-text-dark: #333333;
+    /* Preto / Cinza escuro para títulos e corpo principal */
+    --color-text-light: #666666;
+    /* Cinza médio para textos secundários */
+    --color-text-Extralight: #858585; /* Cinza claro para textos descritivos */
+
+    --color-accent: #00BFFF;
+    /* Azul claro vibrante (provável no gradiente) */
+    --color-border-light: #CCCCCC;
+    /* Cinza claro para bordas/linhas */
 
     /* Cores do Gradiente de Fundo (estimativa) */
-    --gradient-start: #3EAFE4; /* Azul claro */
-    --gradient-middle:#fff;
-    --gradient-end: #e697d4; /* Roxo */
+    --gradient-start: #3EAFE4;
+    /* Azul claro */
+    --gradient-middle: #fff;
+    --gradient-end: #e697d4;
+    /* Roxo */
 
     /* Fontes */
-    --font-family-primary: 'Questrial', sans-serif; 
+    --font-family-primary: 'Questrial', sans-serif;
 
     /* Pesos de Fonte */
     --font-weight-regular: 400;
@@ -22,69 +34,91 @@
     --font-weight-bold: 700;
 
     /* Tamanhos de Fonte */
-    --font-size-hero-title: 3.5rem; /* ~56px, ajuste conforme necessidade, pode ser maior 4rem */
-    --font-size: 16px; /* você pode ajustar isso conforme seu layout */
-    --font-size-section-title: 1.5rem; /* ~24px */
-    --font-size-body: 1.125rem; /* ~18px */
-    --font-size-button: 1rem; /* ~16px */
-    --font-size-nav: 0.9375rem; /* ~15px */
-    --font-size-small: 0.875rem; /* ~14px */
-    --font-size-x-small: 0.75rem; /* ~12px */
+    --font-size-hero-title: 3.5rem;
+    /* ~56px, ajuste conforme necessidade, pode ser maior 4rem */
+    --font-size: 16px;
+    /* você pode ajustar isso conforme seu layout */
+    --font-size-section-title: 1.5rem;
+    /* ~24px */
+    --font-size-body: 1.125rem;
+    /* ~18px */
+    --font-size-button: 1rem;
+    /* ~16px */
+    --font-size-nav: 0.9375rem;
+    /* ~15px */
+    --font-size-small: 0.875rem;
+    /* ~14px */
+    --font-size-x-small: 0.75rem;
+    /* ~12px */
 
     /* Espaçamentos (Padding e Margin) */
-    --spacing-xs: 0.5rem;   /* 8px */
-    --spacing-sm: 1rem;     /* 16px */
-    --spacing-md: 1.5rem;   /* 24px */
-    --spacing-lg: 2rem;     /* 32px */
-    --spacing-xl: 3rem;     /* 48px */
-    --spacing-xxl: 5rem;    /* 80px */
-    --spacing-xxxl: 7.5rem; /* 120px */
+    --spacing-xs: 0.5rem;
+    /* 8px */
+    --spacing-sm: 1rem;
+    /* 16px */
+    --spacing-md: 1.5rem;
+    /* 24px */
+    --spacing-lg: 2rem;
+    /* 32px */
+    --spacing-xl: 3rem;
+    /* 48px */
+    --spacing-xxl: 5rem;
+    /* 80px */
+    --spacing-xxxl: 7.5rem;
+    /* 120px */
 
     /* Alturas de Componentes */
-    --height-header: 7rem; /* 80px */
-    --height-button-primary: 3.125rem; /* ~50px */
-    --height-button-secondary: 2.5rem; /* ~40px */
+    --height-header: 7rem;
+    /* 80px */
+    --height-button-primary: 3.125rem;
+    /* ~50px */
+    --height-button-secondary: 2.5rem;
+    /* ~40px */
 
     /* Raio da Borda (Border Radius) */
-    --border-radius-sm: 0.25rem; /* 4px */
-    --border-radius-md: 0.5rem;  /* 8px */
+    --border-radius-sm: 0.25rem;
+    /* 4px */
+    --border-radius-md: 0.5rem;
+    /* 8px */
 
     /* Sombras (Box Shadow) */
-    --shadow-soft: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve para elementos como botões */
-    --shadow-medium: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    --shadow-soft: 0px 4px 8px;
+    /* Sombra leve para elementos como botões */
+    --shadow-medium: 0px 8px 16px;
 
-    
+
 }
+
 /* Box-sizing universal */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* Remove estilos padrão do body e html */
-html, body {
-  height: 100%;
-  font-family: var(--font-family-primary);
-  background-color: #ffffff;
-  color: var(--color-text-dark);;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html,
+body {
+    height: 100%;
+    font-family: var(--font-family-primary);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Remove decoração de links */
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Remove listas padrão */
 ul,
 ol {
-  list-style: none;
+    list-style: none;
 }
 
 /* Remove estilos padrões de botões e inputs */
@@ -92,70 +126,85 @@ button,
 input,
 textarea,
 select {
-  font: inherit;
-  background: none;
-  border: none;
-  outline: none;
+    font: inherit;
+    background: none;
+    border: none;
+    outline: none;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 /* Imagens responsivas */
 img,
 picture {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 /* Títulos sem margens padrões */
-h1, h2, h3, h4, h5, h6 {
-    
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
     font-weight: 700;
     line-height: 1.2;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: "Raleway", sans-serif;
+}
+
+p {
+    text-indent:1rem;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+small {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    color: var(--color-text-Extralight);
 }
 
 /* Remove borda azul em inputs no mobile */
 input:focus,
 textarea:focus,
 select:focus {
-  outline: none;
+    outline: none;
 }
 
 /* Scroll suave */
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 button {
-  background: none;
-  border: none;
-  padding: 0;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 
 
-/* Seção segura para usar classe container */
-.container {
-  max-width: 1200px;
-  margin-inline: auto;
-  padding-inline: var(--spacing-sm);
-}
+
 
 
 /* ============================================ Header ==============================================================*/
 
 body {
-
-    background: linear-gradient(210deg, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
-    background-size: 200% 200%;
+    /* Exemplo de radial-gradient */
+    background: radial-gradient(circle at 50% 50%, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
+    background-size: 200% 200%; /* Ainda pode ser maior que o body */
     background-position: 25% 75%;
     animation: gradientShift 30s ease-in-out infinite;
+    margin: 0;
+    padding: 0;
 }
 
 @keyframes gradientShift {
@@ -173,19 +222,68 @@ body {
     }
 }
 
+section {
+    max-width: 1200px;          /* limite de largura */
+    margin: 0 auto;             /* centraliza horizontalmente */
+    padding: 1rem;              /* padding interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* centra verticalmente o conteúdo interno */
+    gap: var(--spacing-sm);
+    box-shadow: var(--shadow-medium)#00000015;
+}
+
+/* Estilo geral */
+
+
+.container-site {
+    width: 100%;
+    padding: 2rem 1rem;         /* espaço top/bottom e laterais */
+    box-sizing: border-box;     /* para incluir o padding na largura total */
+    display: flex;
+    flex-direction: column;     /* organiza as sections em coluna */
+    gap: var(--spacing-lg);     /* espaçamento entre cada section */
+}
+
+
+.img-destaques {
+    border-radius: 1.5rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    font-size: var(--font-size-button);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    height: var(--height-button-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+
+
 /* ==== Header Cabeçalho ===============*/
 
 
 /* Base para o cabeçalho principal */
+/* ==== ESTILO BASE (desktop) ==== */
 .cabecalho-site {
     background: linear-gradient(to right, var(--gradient-start), var(--gradient-middle), var(--gradient-end));
     min-height: var(--height-header);
     padding: var(--spacing-sm) 0;
     font-family: var(--font-family-primary);
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-soft)rgba(17, 17, 17, 0.267);
     display: flex;
     align-items: center;
     justify-content: center;
+    /* desktop: centralizado */
     width: 100%;
 }
 
@@ -202,8 +300,10 @@ body {
 /* Estilo para a área do logo e subtítulo */
 .logo-direita {
     display: flex;
-    flex-direction: column; /* Organiza o logo e o subtítulo em coluna */
-    align-items: flex-start; /* Alinha o logo e o subtítulo à esquerda */
+    flex-direction: column;
+    /* Organiza o logo e o subtítulo em coluna */
+    align-items: flex-start;
+    /* Alinha o logo e o subtítulo à esquerda */
 }
 
 .logo-direita .container-img a {
@@ -213,7 +313,8 @@ body {
 }
 
 .logo-direita .container-img img {
-    height: 70px; /* Mantido o tamanho para o logo */
+    height: 70px;
+    /* Mantido o tamanho para o logo */
     width: auto;
     max-width: 250px;
     object-fit: contain;
@@ -225,8 +326,8 @@ body {
     color: var(--color-text-light);
     font-size: var(--font-size-x-small);
     font-weight: var(--font-weight-regular);
-    margin-top: -5px; 
-    padding-left: 5px; 
+    margin-top: -5px;
+    padding-left: 5px;
     opacity: 0.8;
     line-height: 1.2;
 }
@@ -237,6 +338,10 @@ body {
     display: flex;
     justify-content: center;
     flex-grow: 1;
+}
+
+.menu-mobile {
+    display: none;
 }
 
 .menu-header {
@@ -284,20 +389,7 @@ body {
 }
 
 /* Estilos base para todos os botões */
-.btn {
-    padding: var(--spacing-sm) var(--spacing-lg);
-    border: none;
-    border-radius: var(--border-radius-sm);
-    font-size: var(--font-size-button);
-    font-weight: var(--font-weight-semibold);
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    height: var(--height-button-primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-}
+
 
 /* Estilo para o botão "Cadastre-se" (CTA principal) */
 .btn-primary {
@@ -328,7 +420,256 @@ body {
     font-size: 1.2em;
 }
 
+
+
+/* =========== Modal Login e Cadastro ==================================================================================*/
+
+/* Sobreposição */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    /* escondido por padrão */
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Caixa branca */
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    max-width: 360px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de fechar */
+.modal-close {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Inputs e labels */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-content label {
+    font-size: 0.9rem;
+}
+
+.modal-content input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+}
+
+/* Mostrar modal */
+.modal-overlay.active {
+    display: flex;
+}
+
+
 /* ============================================ Conteúdo Principal Site =======================================================*/
+
+.cabecalho-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.text-header-site {
+    padding: 1rem;
+}
+
+
+
+.title-headerSite h1 {
+    font-size: 2.5rem;
+}
+
+.btn-action-header {
+    width: 100%;
+    display: flex;
+    padding: 0 1.8rem;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    font-size: 1.125rem;
+}
+
+.readMore-btn {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.readMore-btn:hover {
+    background-color: var(--color-primary-darkerHover);
+    text-decoration: underline;
+}
+
+.container-img-destaque1 {
+    padding: 0.2rem;
+    width: 450px;
+    background-color: transparent;
+    height: fit-content;
+}
+
+.container-imgDestaque {
+    border-radius: var(--spacing-xs);
+    background-color: var(--color-secondary);
+    box-shadow: var(--shadow-medium) #000000a4;
+}
+
+.container-funcionamento {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cabecalho-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.title-cabecalho h2 {
+    font-size: 2.2rem;
+}
+
+.subtitulo-cabecalho h4{
+    font-size: 1.2rem;
+}
+
+/* Grid de cards */
+.cards-funcionamento {
+    display: grid;
+    /* Usa auto-fit para se adaptar, e minmax para controle de tamanho em telas diferentes */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg); /* Espaçamento entre os cards */
+    align-items: start; /* Cards alinhados ao topo da célula do grid */
+}
+
+/* Cada card */
+.card-container {
+    position: relative; /* Essencial para o posicionamento absoluto do texto */
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius-md);
+    border: 1px solid #0000001e;
+    padding: var(--spacing-md); /* Padding interno do card */
+    box-shadow: var(--shadow-soft); /* Certifique-se que sua var já tem a cor */
+    display: flex;
+    flex-direction: column; /* Organiza imagem, título e texto (se não for absoluto) em coluna */
+    align-items: center; /* Centraliza horizontalmente imagem e título */
+    /* Removido `gap` pois elementos serão movidos/posicionados. Gerenciar com margins. */
+
+    /* Altura mínima do card no estado inicial (não expandido) */
+    min-height: 380px; /* Ajuste para caber imagem + título + padding inicial */
+    overflow: hidden; /* Importante para esconder o texto absoluto abaixo */
+
+    /* Transições para o próprio container do card */
+    transition: min-height 0.6s ease-in-out, /* Expansão da altura do card */
+                transform 0.3s ease-out, /* Levantamento sutil do card */
+                box-shadow 0.3s ease-out, /* Sombra ao interagir */
+                z-index 0s 0.3s; /* Z-index para sobrepor (com pequeno delay) */
+    z-index: 1; /* Garante que os cards estejam em uma camada visível por padrão */
+}
+
+/* Imagem do card */
+.card-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  transition: width 0.4s ease-in-out;
+  margin: 0 auto;
+}
+
+/* Título */
+.title-card {
+  margin-top: auto;   /* empurra pro fim do flex (embaixo) */
+  transition: margin .4s ease-in-out;
+}
+
+.card-container:hover .title-card {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Texto extra escondido */
+.text-card-funcionamento {
+  opacity: 0;
+  max-height: 0;
+  transform: translateY(20px);
+  transition: opacity .4s, max-height .4s, transform .4s, padding .4s;
+}
+
+.card-container:hover .text-card-funcionamento {
+  opacity: 1;
+  max-height: 200px;
+  transform: translateY(0);
+  padding: var(--spacing-xs);
+  margin-top: auto;  /* fica lá embaixo */
+}
+
+/* Hover ou estado ativo */
+.card-container:hover,
+.card-container.is-active {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-strong);
+  cursor: pointer;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-between;  /* <— título em cima, texto embaixo */
+}
+
+.card-container:hover .card-img {
+  width: 60%;
+  transform: scale(1.02);
+}
+
+/* No hover: reduz a imagem, move o título pro topo e revela o texto */
+.card-container:hover .card-img,
+.card-container.is-active .card-img {
+  width: 80%;
+
+  
+}
+
+
+
+
+.card-container:hover .title-card,
+.card-container.is-active .title-card {
+  margin-top: 0;
+  margin-bottom: var(--spacing-xs);
+}
+
+.card-container:hover .text-card-funcionamento,
+.card-container.is-active .text-card-funcionamento {
+  opacity: 1;
+  max-height: 200px;
+  transform: translateY(0);
+  padding: var(--spacing-xs);
+  /* margin-top: auto; não precisa aqui porque o fluxo flex já empurra pro final */
+}
+
+
 
 
 
@@ -336,52 +677,236 @@ body {
 
 
 /* ======= Media Queries para Responsividade ======= */
-@media (max-width: 768px) {
-    
-     .container-header {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Logo e menu móvel */
-        
-        
+@media (max-width: 1024px) {
+
+    .cabecalho-site {
+        min-height: unset;
+        /* deixa ele fluir com o conteúdo */
+        padding: 1rem 2rem;
+        /* mais respiro nas laterais */
+        justify-content: flex-start;
+        /* alinha tudo à esquerda */
     }
-    
+
+    .container-header {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        /* alinhamento vertical */
+        width: 100%;
+        max-width: 1280px;
+        /* limite de largura confortável */
+        margin: 0 auto;
+        /* centraliza horizontalmente */
+        gap: 1rem;
+        /* espaçamento entre logo, menu e botões */
+    }
+
+
     .logo-direita {
-        flex-direction: column; /* Organiza o logo e o subtítulo em linha */
-        align-items: center; /* Alinha o logo e o subtítulo verticalmente */
-        height: 50px; /* Reduz o tamanho do logo em telas menores */
+        display: flex;
+        /* se quiser subtítulo ao lado, use row; se quiser embaixo, mantenha column */
+        flex-direction: column;
+        align-items: center;
+        /* deixa a altura fluir conforme o conteúdo: */
+        height: auto;
+        gap: 0.5rem;
+    }
+
+    /* reduz apenas a imagem para caber na linha */
+    .logo-direita .container-img img {
+        height: 50px;
         width: auto;
     }
-    
-    
-    
+
     .logo-subtitle {
-        display: none; /* Oculta o subtítulo em telas menores */
+        font-size: var(--font-size-x-small);
+        opacity: 0.8;
+        margin: 0;
+        /* sem margin-top negativa */
+        padding: 0;
+        display: block;
+        /* garanta que apareça */
     }
-    
-   
-    
-    .menu-header {
-        display: none; /* Oculta o menu principal em telas menores */
+
+
+    .menu-centro,
+    .botoes-esquerda {
+        display: none;
     }
-    
-    .btn-primary, .btn-secondary {
-        display: none; /* Oculta os botões de autenticação em telas menores */
-    }
-    
+
+
     .menu-mobile {
-        display: flex; /* Exibe o menu móvel */
+        justify-self: end;
+        display: flex;
         align-items: center;
     }
-    
-    .btn-menu-hiden  {
+
+    .btn-menu-hiden {
+        display: flex;
         align-items: center;
+        /* Adiciona um background sutil para destacar o botão */
+        background-color: var(--color-primary-dark);
+        /* Exemplo: um tom mais escuro da sua cor primária */
+        border-radius: 4px;
+        /* Cantos levemente arredondados */
+        padding: 0.25rem 0.5rem;
     }
-    
+
     .btn-menu-hiden .bi {
         font-size: 2rem;
-        
+        color: var(--color-text-light);
+        /* Para ícones claros em fundos escuros */
     }
-    
+
+    /* container do dropdown */
+    .mobile-nav {
+        display: none;
+        position: absolute;
+        top: 72px;
+        right: 0;
+        width: max-content;
+        /* Ocupa apenas o espaço necessário pelo conteúdo */
+        /* width: 250px; */
+        /* Alternativa: um valor fixo se preferir */
+        background: var(--color-secondary);
+        padding: 1rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        /* Sombra mais pronunciada */
+        border-radius: 8px;
+        /* Cantos arredondados para um visual moderno */
+        z-index: 100;
+        border: 1px solid var(--color-border);
+        /* Borda sutil como em painéis de código */
+        min-width: 200px;
+        /* Garante que não fique muito estreito */
+    }
+
+
+    /* quando ativo */
+    .mobile-nav.active {
+        display: block;
+    }
+
+    /* A SETA PRINCIPAL (Triângulo de cor sólida) */
+    .mobile-nav::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        right: 76px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 12px solid var(--color-secondary);
+        z-index: 51;
+    }
+
+    /* A BORDA DA SETA (Triângulo de borda, opcional mas recomendado) */
+    .mobile-nav::after {
+        content: '';
+        position: absolute;
+        top: -13px;
+        /* top -1px que o ::before para a borda aparecer */
+        right: 24px;
+        /* right -1px que o ::before para a borda aparecer */
+        width: 0;
+        height: 0;
+        border-left: 11px solid transparent;
+        /* Um pouco maior que o ::before */
+        border-right: 11px solid transparent;
+        /* Um pouco maior que o ::before */
+        border-bottom: 13px solid var(--color-border);
+        /* ALTURA e COR da borda. Mesma cor da borda do menu */
+        z-index: 50;
+        /* Mesmo z-index do menu para que a borda "envolva" a seta principal */
+    }
+
+    /* quando ativo */
+    .mobile-nav.active {
+        display: block;
+    }
+
+    /* lista vertical */
+    .mobile-menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        /* Espaçamento ajustado */
+    }
+
+    /* estilo links (herda do .menu-header se quiser) */
+    .mobile-menu-list a {
+        text-decoration: none;
+        color: var(--color-text-dark);
+        /* Cor do texto padrão */
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--font-size-button);
+        padding: 0.5rem 0.75rem;
+        /* Preenchimento para áreas clicáveis maiores */
+        display: block;
+        /* Para o padding funcionar em toda a área do link */
+        transition: background-color 0.2s ease, color 0.2s ease;
+        /* Transição suave */
+    }
+
+    .mobile-menu-list a:hover {
+        background-color: var(--color-primary);
+        /* Fundo ao passar o mouse */
+        color: var(--color-secondary);
+        /* Cor do texto ao passar o mouse */
+        border-radius: 4px;
+    }
+
+    /* botões em coluna */
+    .mobile-auth-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        /* Espaçamento ajustado */
+        margin-top: 1.5rem;
+        border-top: 1px solid var(--color-border);
+        /* Separador sutil */
+        padding-top: 1rem;
+    }
+
+    .mobile-auth-buttons .btn {
+        width: 100%;
+        /* Botões ocupam a largura total do menu */
+        font-size: var(--font-size-button);
+        padding: 0.6rem 1rem;
+        border-radius: 6px;
+        /* Cantos mais arredondados para os botões */
+    }
 }
 
+@media (max-width: 600px) {
+    .logo-subtitle {
+        display: none;
+    }
+
+    .mobile-nav {
+        top: 72px;
+        /* Ajuste este valor. 50px (altura do logo) + 5px de espaço */
+    }
+
+    .mobile-nav::before {
+        top: -12px;
+        /* Ajuste: Coloca a ponta do triângulo 12px acima do topo do menu */
+        right: 56px;
+        /* AJUSTE CRÍTICO: Posicione horizontalmente para alinhar com seu ícone */
+
+    }
+
+    /* A BORDA DA SETA (Triângulo de borda, opcional mas recomendado) */
+    .mobile-nav::after {
+        top: -13px;
+        /* top -1px que o ::before para a borda aparecer */
+        right: 30px;
+        /* right -1px que o ::before para a borda aparecer */
+
+    }
+}
