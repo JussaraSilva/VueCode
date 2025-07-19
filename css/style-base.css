@@ -7,6 +7,9 @@
     /* Roxo vibrante */
     --color-secondary: #FFFFFF;
     /* Branco */
+    
+    --color-black: #000000;
+    /* Preto */
     --color-text-dark: #333333;
     /* Preto / Cinza escuro para títulos e corpo principal */
     --color-text-light: #666666;
@@ -36,7 +39,7 @@
     /* Tamanhos de Fonte */
     --font-size-hero-title: 3.5rem;
     /* ~56px, ajuste conforme necessidade, pode ser maior 4rem */
-    --font-size: 16px;
+    --font-size: 1.1rem;
     /* você pode ajustar isso conforme seu layout */
     --font-size-section-title: 1.5rem;
     /* ~24px */
@@ -103,6 +106,7 @@ html,
 body {
     height: 100%;
     font-family: var(--font-family-primary);
+    font-size: var(--font-size);
     color: var(--color-text-dark);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -285,6 +289,14 @@ section {
     justify-content: center;
     /* desktop: centralizado */
     width: 100%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.cabecalho-site.scrolled {
+    background: linear-gradient(to right,rgba(100, 180, 246, 0.9), rgba(120, 200, 255, 0.8),rgba(140, 220, 255, 0.7));
+    backdrop-filter: blur(8px);  /* Efeito de vidro fosco - opcional */
+    box-shadow: var(--shadow-medium) rgba(0, 0, 0, 0.2);
 }
 
 /* Container interno para centralizar e espaçar o conteúdo do cabeçalho */
@@ -488,6 +500,7 @@ section {
 /* ============================================ Conteúdo Principal Site =======================================================*/
 
 .cabecalho-content {
+    margin-top: 7rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
@@ -535,6 +548,9 @@ section {
     background-color: var(--color-secondary);
     box-shadow: var(--shadow-medium) #000000a4;
 }
+
+
+/* ============================================ Section Sobre - Funcionamento =======================================================*/
 
 .container-funcionamento {
     display: flex;
@@ -602,12 +618,13 @@ section {
 
 /* Título */
 .title-card {
-  margin-top: auto;   /* empurra pro fim do flex (embaixo) */
-  transition: margin .4s ease-in-out;
+  font-size: var(--font-size-body);
+  padding: var(--spacing-xs);
+  font-weight: var(--font-weight-semibold);
 }
 
 .card-container:hover .title-card {
-  margin-top: 0;
+  margin-top: var(--spacing-xs);
   margin-bottom: var(--spacing-xs);
 }
 
@@ -646,11 +663,8 @@ section {
 /* No hover: reduz a imagem, move o título pro topo e revela o texto */
 .card-container:hover .card-img,
 .card-container.is-active .card-img {
-  width: 80%;
-
-  
+  width: 80%;  
 }
-
 
 
 
@@ -667,6 +681,93 @@ section {
   transform: translateY(0);
   padding: var(--spacing-xs);
   /* margin-top: auto; não precisa aqui porque o fluxo flex já empurra pro final */
+}
+
+/* ============ Section Funcionalidades ==================================================================================*/
+
+.section-funcionalidades {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    align-items: center;
+
+}
+.container-funcionalidades {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.title-funcionalidades {
+    font-size: var(--font-size-section-title);
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.content-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    
+}
+
+.text-direita {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-lg);
+    
+}
+
+.button-actionFuncionalidades {
+    display: flex;
+    padding: var(--spacing-md);
+    
+}
+
+.btn-action-funcionalidades {
+    background-color: var(--color-black);
+    color: var(--color-secondary);
+    transition: all ease-in-out 0.4s; /* Adicionei 'all' e aumentei para 0.4s */
+}
+
+.btn-action-funcionalidades:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    transform: scale(1.05); /* Reduzi um pouco o scale para ficar mais sutil */
+}
+
+.topicos-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+
+.img-esquerda2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.content-textTopicos {
+    gap: var(--spacing-xs);
+    
+}
+
+.topicos-description {
+    font-size: var(--font-size-small);
+    padding: 0.5rem;
+    line-height: 1.5;
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+
+.topicos-description h3 {
+    margin: var(--spacing-xs) ;
 }
 
 

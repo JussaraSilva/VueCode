@@ -1,3 +1,16 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.querySelector('.cabecalho-site');
+    
+    window.addEventListener('scroll', function() {
+        // Adiciona a classe quando rolar mais de 50px
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
+
 function toggleMobileMenu() {
     const mobileNav = document.getElementById('mobileNav');
     const menuIcon = document.getElementById('menuIcon'); // Obter o ícone
