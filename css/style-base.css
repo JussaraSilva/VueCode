@@ -254,6 +254,7 @@ section {
     border-radius: 1.5rem;
     width: 100%;
     object-fit: cover;
+    box-shadow: var(--shadow-soft)#00000054;
 }
 
 .btn {
@@ -500,7 +501,7 @@ section {
 /* ============================================ Conteúdo Principal Site =======================================================*/
 
 .cabecalho-content {
-    margin-top: 7rem;
+    margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
@@ -770,6 +771,144 @@ section {
     margin: var(--spacing-xs) ;
 }
 
+
+
+.topicos-icon {
+    list-style-type: none;
+}
+
+.icon-topicos {
+    padding: var(--spacing-xs);
+    font-size: var(--font-size-body);
+}
+
+.frase-efeito {
+    font-size: var(--font-size-button);
+    
+}
+
+.img-esquerda3 {
+    display: flex;
+    justify-items: flex-start;
+}
+
+.container-img-destaque3 {
+    align-items: flex-start!important;    
+}
+
+.depoimentos-section {
+    background-color: var(--gradient-start);
+    border-radius: var(--border-radius-md);
+}
+
+.grid-depoimentos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+
+.text-direitaDepo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-lg);
+}
+
+.text-direitaDepo h1 {
+    font-size: 3rem;
+}
+
+.slider-container {
+    position: relative;
+    background-color: var(--gradient-middle);
+    top: -18px;
+    padding: 1.5rem;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: var(--shadow-medium)#05050552;
+} 
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+    justify-content: center;
+}
+
+.comentario-text {
+    font-size: var(--font-size-section-title);
+    font-family: "Winky Rough", sans-serif;
+    background-color: #eee2e242;
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-sm);
+}
+
+.description-depoimentos {
+    font-size: var(--font-size-nav);
+    
+    
+}
+
+.profile-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: flex-end;
+    gap: 0.5rem;
+}
+
+.img-profile {
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background-color: #3eafe41f;
+    
+}
+
+.img-profile img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    
+}
+
+.nome-profissao {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+
+
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.dot.active {
+  background-color: #000;
+}
+
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 
 
 
