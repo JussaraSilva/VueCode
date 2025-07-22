@@ -1,9 +1,9 @@
 /* ==== RESET BASEADO NO PROJETO DA JU ==== */
 :root {
     /* Cores */
-    --color-primary: #5F40FF;
+    --color-primary: #053397;
 
-    --color-primary-darkerHover: #3811fa;
+    --color-primary-darkerHover: #021746;
     /* Roxo vibrante */
     --color-secondary: #FFFFFF;
     /* Branco */
@@ -18,7 +18,7 @@
 
     --color-accent: #00BFFF;
     /* Azul claro vibrante (provável no gradiente) */
-    --color-border-light: #CCCCCC;
+    --color-border-light: #cccccc4f;
     /* Cinza claro para bordas/linhas */
 
     /* Cores do Gradiente de Fundo (estimativa) */
@@ -39,7 +39,7 @@
     /* Tamanhos de Fonte */
     --font-size-hero-title: 3.5rem;
     /* ~56px, ajuste conforme necessidade, pode ser maior 4rem */
-    --font-size: 1.1rem;
+    --font-size: 1rem;
     /* você pode ajustar isso conforme seu layout */
     --font-size-section-title: 1.5rem;
     /* ~24px */
@@ -165,8 +165,8 @@ h2 {
 }
 
 p {
-    text-indent:1rem;
-    text-align: justify;
+    text-indent:0.8rem;
+    text-align: left;
     line-height: 1.6;
 }
 
@@ -227,7 +227,7 @@ body {
 }
 
 section {
-    max-width: 1200px;          /* limite de largura */
+    max-width: 1000px;          /* limite de largura */
     margin: 0 auto;             /* centraliza horizontalmente */
     padding: 1rem;              /* padding interno */
     display: flex;
@@ -371,7 +371,7 @@ section {
     font-size: var(--font-size-button);
     font-weight: var(--font-weight-semibold);
     padding: var(--spacing-xs) 0;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Manter a transição de cor */
     position: relative;
 }
 
@@ -384,15 +384,33 @@ section {
     position: absolute;
     left: 0;
     bottom: -2px;
-    width: 0;
+    width: 0; /* Começa com largura zero */
     height: 2px;
     background-color: var(--color-primary);
-    transition: width 0.3s ease-out;
+    transition: width 0.3s ease-out; /* Transição para a largura */
 }
 
 .menu-header li a:hover::after {
-    width: 100%;
+    width: 100%; /* Expande no hover */
 }
+
+/* NOVO BLOCO PARA O ESTADO ACTIVE */
+
+.menu-header li a.active {
+    color: var(--color-primary); /* Cor do texto quando ativo */
+    font-weight: var(--font-weight-semibold); /* Manter o mesmo peso de fonte ou mudar */
+    
+}
+
+.menu-header li a.active::after {
+    width: 100%; /* O sublinhado aparece completamente quando o item está ativo */
+}
+
+/* Opcional: Para garantir que o hover ainda funcione no active */
+.menu-header li a.active:hover {
+    color: var(--color-primary); /* Mantém a cor primária mesmo no hover se já estiver ativo */
+}
+
 
 /* Estilo para a área dos botões de autenticação */
 .botoes-esquerda {
@@ -401,7 +419,7 @@ section {
     align-items: center;
 }
 
-/* Estilos base para todos os botões */
+/* ----------------------------- Estilos base para todos os botões Cadastro e Login  ------------------*/
 
 
 /* Estilo para o botão "Cadastre-se" (CTA principal) */
@@ -593,14 +611,9 @@ section {
     box-shadow: var(--shadow-soft); /* Certifique-se que sua var já tem a cor */
     display: flex;
     flex-direction: column; /* Organiza imagem, título e texto (se não for absoluto) em coluna */
-    align-items: center; /* Centraliza horizontalmente imagem e título */
-    /* Removido `gap` pois elementos serão movidos/posicionados. Gerenciar com margins. */
-
-    /* Altura mínima do card no estado inicial (não expandido) */
+    align-items: center; /* Centraliza horizontalmente imagem e título */   
     min-height: 380px; /* Ajuste para caber imagem + título + padding inicial */
     overflow: hidden; /* Importante para esconder o texto absoluto abaixo */
-
-    /* Transições para o próprio container do card */
     transition: min-height 0.6s ease-in-out, /* Expansão da altura do card */
                 transform 0.3s ease-out, /* Levantamento sutil do card */
                 box-shadow 0.3s ease-out, /* Sombra ao interagir */
@@ -639,7 +652,7 @@ section {
 
 .card-container:hover .text-card-funcionamento {
   opacity: 1;
-  max-height: 200px;
+  max-height: 400px;
   transform: translateY(0);
   padding: var(--spacing-xs);
   margin-top: auto;  /* fica lá embaixo */
@@ -678,11 +691,103 @@ section {
 .card-container:hover .text-card-funcionamento,
 .card-container.is-active .text-card-funcionamento {
   opacity: 1;
-  max-height: 200px;
+  max-height: 500px;
   transform: translateY(0);
   padding: var(--spacing-xs);
   /* margin-top: auto; não precisa aqui porque o fluxo flex já empurra pro final */
 }
+
+
+
+/* =========================== Section Sobre ===========================================================*/
+
+.container-about {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-section-about h2 {
+    font-size: var(--font-size-section-title);
+    color: var(--color-primary); /* Cor primária para destaque */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.content-text-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+/*================================= Section Linguagens Suportadas===========================================================*/
+
+/* Seção de Linguagens Suportadas */
+.supported-languages {
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+.supported-languages .container-linguagens {
+    margin: 0 auto;
+}
+
+
+.supported-languages h2 {
+    font-size: var(--font-size-section-title);
+    color: var(--color-primary); /* Cor primária para destaque */
+    margin-bottom: 25px;
+}
+
+
+
+.languages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Colunas flexíveis */
+    gap: 20px; /* Espaço entre os itens */
+    margin: var(--spacing-sm);
+}
+
+.language-item {
+    background-color: #ffffff;
+    border: 1px solid #cce0ff; /* Borda mais clara */
+    border-radius: 10px;
+    padding: 20px 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--color-accent); /* Cor do texto da linguagem */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Para centralizar o texto verticalmente */
+    align-items: center;
+    justify-content: center;
+    min-height: 80px; /* Garante altura mínima para cada item */
+    gap: 10px; /* Espaço entre o ícone e o texto */
+}
+
+.language-item:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.call-to-action {
+    font-size: 1.3em;
+    color: var(--color-black);
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
 
 /* ============ Section Funcionalidades ==================================================================================*/
 
@@ -750,7 +855,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    margin-top: var(--spacing-lg);
     
 }
 
@@ -930,7 +1035,324 @@ section {
 }
 
 
+/* Faq Section Style */
+/* Seção FAQ */
+.faq-section {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
 
+.faq-section .container-faq {
+    
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: var(--font-size-section-title);
+    color: var(--color-primary); /* Cor primária para destaque */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.faq-category {
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.faq-category h3 {
+    font-size: var(--font-size-body);
+    color: var(--color-primary-darkerHover); /* Cor secundária para categorias */
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.faq-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.faq-question {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 18px 25px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question::after {
+    content: '+'; /* Ícone para indicar que pode ser expandido */
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active {
+    background-color: #e2e2e2;
+}
+
+.faq-question.active::after {
+    content: '-'; /* Ícone para indicar que está expandido */
+    transform: rotate(0deg); /* Não rotaciona, apenas muda para '-' */
+}
+
+.faq-answer {
+    padding: 0 25px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* Estado ativo do JavaScript */
+.faq-answer.show {
+    max-height: 200px; /* Um valor alto o suficiente para a maioria das respostas */
+    padding-bottom: 25px;
+    transition: max-height 0.5s ease-in, padding 0.5s ease-in; /* Ajuste a duração para um efeito mais suave */
+}
+
+/* =========== Contact Section ==================*/
+
+/* Seção de Contato */
+.contact-section {
+    color: var(--color-text-dark);
+    text-align: center;
+    width: 100%;
+}
+
+.contact-container {
+    border-radius: var(--border-radius-md); /* 8px de borda */
+    box-shadow: var(--shadow-medium) rgba(0, 0, 0, 0.1);
+    background-color: #fdfdfd3f;
+    backdrop-filter: blur(10px);  /* Efeito de vidro fosco - opcional */
+    padding: var(--spacing-lg); /* 32px de padding */ 
+}
+
+.contact-title h2 {
+    font-size: var(--font-size-section-title); /* Usando o tamanho de título principal */
+    color: var(--color-primary); /* Cor primária roxa */
+    margin-bottom: var(--spacing-lg); /* 32px de margem inferior */
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: var(--spacing-sm); /* 16px de padding */
+    margin-bottom: var(--spacing-md); /* 24px de margem inferior */
+    border: 2px solid var(--color-border-light); /* Borda cinza claro */
+    border-radius: var(--border-radius-sm); /* 4px de borda */
+    font-size: var(--font-size-body); /* Tamanho de fonte do corpo */
+    font-family: var(--font-family-primary); /* Garante a fonte para inputs */
+    color: var(--color-text-dark); /* Cor do texto dentro do input */
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--color-text-Extralight); /* Cor para o placeholder */
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--color-primary); /* Cor primária ao focar */
+    box-shadow: var(--shadow-soft) rgba(95, 64, 255, 0.2); /* Sombra suave com a cor primária */
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form .btn-primary {
+    background-color: var(--color-primary); /* Cor de fundo roxa primária */
+    color: var(--color-secondary); /* Texto branco */
+    padding: var(--spacing-sm) var(--spacing-lg); /* 16px vertical, 32px horizontal */
+    border: none;
+    border-radius: var(--border-radius-md); /* 8px de borda */
+    font-size: var(--font-size-button); /* Tamanho de fonte do botão */
+    font-weight: var(--font-weight-bold); /* Peso da fonte negrito */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    height: var(--height-button-primary); /* Altura fixa do botão */
+    display: flex; /* Para centralizar o texto verticalmente */
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: var(--color-primary-darkerHover); /* Cor mais escura ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+.contact-form .btn-primary:active {
+    transform: translateY(0);
+}
+
+
+
+/* Footer =====================================*/
+
+footer {
+    background-color: var(--gradient-start);
+    color: var(--color-secondary);
+    padding: var(--spacing-lg);
+}
+
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    gap: var(--spacing-md);
+    align-content: flex-start;
+}
+
+
+/* Estilo para a linha divisória no footer */
+.line-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: var(--spacing-lg); 
+    margin-bottom: var(--spacing-lg); 
+}
+
+.line-footer hr {
+    border: none; 
+    border-top: 1px solid var(--color-border-light);
+    max-width: 100%;  
+    
+}
+
+.logo-direita-footer {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+    height: auto;
+    justify-content: center;
+    padding: var(--spacing-sm);
+    
+}
+
+.menu-meio-footer {
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    padding: 0.5rem;
+    
+}
+
+.menu-footer {
+    display: flex;
+    width: 150px;
+    flex-direction: column;
+    padding: 0.2rem;
+}
+
+.menu-footer li:hover {
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius-sm);
+    padding: 0.2rem;
+    cursor: pointer;
+    color:var(--color-primary);
+}
+
+.endereco-esquerda-footer {
+    padding: var(--spacing-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+
+    
+    
+}
+
+.adress-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.link-sobre a {
+    color: var(--color-primary-darkerHover);
+    text-decoration: underline;
+}
+
+
+.lineGrid-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+
+
+.termos-esquerda {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-size-button);
+    gap: var(--spacing-xs);
+    transition: ease-in-out 0.3s;
+}
+
+.social-direita {
+    display: flex;
+    flex-direction: row;
+    font-size: var(--font-size-section-title);
+    gap: var(--spacing-xs);
+    transition: ease-in-out 0.3s;
+}
+
+
+.termos-esquerda span {
+    color: var(--color-primary-darkerHover);
+    text-decoration: underline;
+}
+
+.social-direita span:hover {
+    color: var(--color-black);
+    cursor: pointer;
+    scale: 1.2;
+
+}
 
 
 
@@ -1145,6 +1567,23 @@ section {
         border-radius: 6px;
         /* Cantos mais arredondados para os botões */
     }
+
+    #faq-section h2 {
+        font-size: 2em;
+    }
+
+    .faq-category h3 {
+        font-size: 1.5em;
+    }
+
+    .faq-question {
+        font-size: 1em;
+        padding: 15px 20px;
+    }
+
+    .faq-answer {
+        padding: 0 20px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1172,5 +1611,9 @@ section {
         right: 30px;
         /* right -1px que o ::before para a borda aparecer */
 
+    }
+
+    .languages-grid {
+        grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
     }
 }

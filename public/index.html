@@ -49,13 +49,16 @@
                 <div class="container-menu">
                     <ul class="menu-header">
                         <li>
-                            <a href="./index.html">Início</a>
+                            <a href="#inicio">Início</a>
                         </li>
                         <li>
-                            <a href="#recursos">Recursos</a>
+                            <a href="#funcionalidades">Recursos</a>
                         </li>
                         <li>
                             <a href="#sobre">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#perguntas">Dúvidas</a>
                         </li>
                         <li>
                             <a href="#contato">Contato</a>
@@ -108,329 +111,514 @@
     </header>
 
     <main class="container-site">
-        <section class="header-site section-cabecalhoSite">
-            <div class="cabecalho-content">
+
+    <section class="header-site section-cabecalhoSite" id="inicio">
+        <div class="cabecalho-content">
+            <div class="text-header-site">
+                <div class="text-descricaoHeader">
+                    <small>VueCode - A Plataforma All-in-One para Edição de Códigos com vídeo</small>
+                </div>
+                <div class="title-headerSite">
+                    <h1>Codifique enquanto assiste, aprenda enquanto constrói</h1>
+                </div>
                 <div class="text-header-site">
-                    <div class="text-descricaoHeader">
-                        <small>VueCode - A Plataforma All-in-One para Edição de Códigos  com vídeo</small>
-                    </div>
-                    <div class="title-headerSite">
-                        <h1>Codifique enquanto assiste, aprenda enquanto constrói</h1>
-                    </div>
-                    <div class="text-header-site">
-                        <p>VueCode é uma plataforma web que combina edição de código HTML/CSS ao vivo com a integração de vídeos (YouTube), oferecendo uma experiência única para quem aprende e pratica front-end. O usuário pode escrever código, ver o resultado em tempo real e assistir a videoaulas simultaneamente — tudo em uma única interface responsiva e intuitiva.</p>
-                    </div>
-                    <div class="btn-action-header">
-                        <button class="btn readMore-btn">
-                            Saiba Mais
-                        </button>
-                    </div>
+                    <p>VueCode é uma plataforma web que combina edição de código HTML/CSS ao vivo com a integração de vídeos (YouTube), oferecendo uma experiência única para quem aprende e pratica front-end. O usuário pode escrever código, ver o resultado em tempo real e assistir a videoaulas simultaneamente — tudo em uma única interface responsiva e intuitiva.</p>
                 </div>
-                <div class="container-img-destaque1 container-imgDestaque">
-                    <img class="img-destaques destaque1" src="../assets/img/apresentacao/imagem-destaque1.webp" alt="">
+                <div class="btn-action-header">
+                    <a href="#funcionalidades" class="btn readMore-btn">
+                        Saiba Mais
+                    </a>
+                    </div>
+            </div>
+            <div class="container-img-destaque1 container-imgDestaque">
+                <img class="img-destaques destaque1" src="../assets/img/apresentacao/imagem-destaque1.webp" alt="Interface do VueCode com edição de código e vídeo">
+            </div>
+        </div>
+    </section>
+
+    <section class="section-funcionamento" id="como-funciona">
+        <div class="container-funcionamento">
+            <div class="cabecalho-text">
+                <div class="title-cabecalho">
+                    <h2>Como o VueCode Funciona</h2>
+                </div>
+                <div class="subtitulo-cabecalho">
+                    <h4>
+                        A plataforma VueCode oferece uma solução completa para entusiastas e profissionais de desenvolvimento web.
+                    </h4>
+                </div>
+                <div class="descricao-funcionamento">
+                    <p>Codifique e visualize seu projeto enquanto assiste a tutoriais. Tudo sincronizado em tempo real para você aprender mais rápido e com mais foco.</p>
                 </div>
             </div>
-        </section>
 
-        <section class="section-funcionamento">
-            <div class="container-funcionamento">
-                <div class="cabecalho-text">
-                    <div class="title-cabecalho">
-                        <h2>Como VueCode Funciona</h2>
+            <div class="cards-funcionamento">
+                <div class="card-container card-container1">
+                    <div class="img-card-funcionamento">
+                        <img class="card-img" src="../assets/img/apresentacao/card-assistir.webp" alt="Ícone de vídeo para 'Assista'">
                     </div>
-                    <div class="subtitulo-cabecalho">
-                        <h4>
-                            A plataforma VueCode oferece uma solução completa para entusiastas e profissionais de desenvolvimento web.                            
-                        </h4>
-                    </div>
-                    <div class="descricao-funcionamento">
-                        <p>Codifique e visualize seu projeto enquanto assiste a tutoriais.
-                            Tudo sincronizado em tempo real para você aprender mais rápido e com mais foco.
-                        </p>
-                    </div>
-                    
+                    <span class="title-card">Assista</span>
+                    <p class="text-card-funcionamento">Mergulhe em videoaulas integradas ao editor e aprenda com quem manja do código, sem trocar de aba. É como ter um dev sênior no ombro, explicando cada passo ao vivo — só que sem carregar café pra ele.</p>
                 </div>
 
-                <div class="cards-funcionamento">
-                    <div class="card-container card-container1">
-                        <div class="img-card-funcionamento">
-                            <img class="card-img" src="../assets/img/apresentacao/card-assistir.webp" alt="">
-                        </div>
-                        <span class="title-card">
-                            Assista
-                        </span>
-                        <p class="text-card-funcionamento">
-                            Mergulhe em videoaulas integradas ao editor e aprenda com quem manja do código, sem trocar de aba. É como ter um dev sênior no ombro, explicando cada passo ao vivo — só que sem carregar café pra ele.
-                        </p>
+                <div class="card-container card-container2">
+                    <div class="img-card-funcionamento">
+                        <img class="img-destaques card-img" src="../assets/img/apresentacao/card-codar.webp" alt="Ícone de teclado para 'Codifique'">
                     </div>
+                    <span class="title-card">Codifique</span>
+                    <p class="text-card-funcionamento">Bateu aquela ideia? Solta os dedos no teclado dentro da mesma interface e veja cada linha de HTML/CSS ganhar vida em tempo real. É zero fricção: edita, testa e refatora na hora, tipo um DJ remixando seu próprio som.</p>
+                </div>
 
-                    <div class="card-container card-container2">
-                        <div class="img-card-funcionamento">
-                            <img class="img-destaques card-img" src="../assets/img/apresentacao/card-codar.webp" alt="">
-                        </div>
-                        <span class="title-card">
-                            Codifique
-                        </span>
-                        <p class="text-card-funcionamento">
-                            Bateu aquela ideia? Solta os dedos no teclado dentro da mesma interface e veja cada linha de HTML/CSS ganhar vida em tempo real. É zero fricção: edita, testa e refatora na hora, tipo um DJ remixando seu próprio som. 
-                        </p>
+                <div class="card-container card-container3">
+                    <div class="img-card-funcionamento">
+                        <img class="img-destaques card-img" src="../assets/img/apresentacao/card-resultado.webp" alt="Ícone de monitor para 'Visualize'">
                     </div>
-
-                    <div class="card-container card-container3">
-                        <div class="img-card-funcionamento">
-                            <img class="img-destaques card-img" src="../assets/img/apresentacao/card-resultado.webp" alt="">
-                        </div>
-                        <span class="title-card">
-                            Visualize
-                        </span>
-                        <p class="text-card-funcionamento">
-                            Seu código não é só texto — é experiência. Veja o preview instantâneo lado a lado com o vídeo, para acompanhar cada mudança sem perder o ritmo. Feedback instantâneo pra você nunca ficar no escuro.
-                        </p>
-                    </div>
-                    
+                    <span class="title-card">Visualize</span>
+                    <p class="text-card-funcionamento">Seu código não é só texto — é experiência. Veja o preview instantâneo lado a lado com o vídeo, para acompanhar cada mudança sem perder o ritmo. Feedback instantâneo pra você nunca ficar no escuro.</p>
                 </div>
             </div>
-        </section>
-        
-        <section class="section-funcionalidades">
-            <div class="container-funcionalidades funcionalidades1">
-                <div class="title-funcionalidades">
-                    <h1>VueCode: Sua Estação Completa para o Desenvolvimento Web</h1>
-                </div>
-                
-                <div class="content-section">
-                    <div class="text-direita">
-                        <div class="title-call">
-                            <h3>Cansado de alternar entre dezenas de ferramentas?</h3>
-                        </div>
-                        <div class="description-funcionalidades">
-                            <p>
-                            Com o VueCode, sua jornada de aprendizado web se torna fluida e sem interrupções. 
+        </div>
+    </section>
+
+    <section class="section-funcionalidades" id="funcionalidades">
+        <div class="container-funcionalidades funcionalidades1">
+            <div class="title-funcionalidades">
+                <h1>VueCode: Sua Estação Completa para o Desenvolvimento Web</h1>
+            </div>
+
+            <div class="content-section">
+                <div class="text-direita">
+                    <div class="title-call">
+                        <h3>Cansado de alternar entre dezenas de ferramentas?</h3>
+                    </div>
+                    <div class="description-funcionalidades">
+                        <p>
+                            Com o VueCode, sua jornada de aprendizado web se torna fluida e sem interrupções.
                             Transforme seu foco em resultados reais com uma interface inteligente que integra
-                            todas as suas ferramentas, desde o editor de código até aulas interativas. 
-                            Aprenda no seu próprio ritmo, impulsione sua produtividade e domine o desenvolvimento web como nunca antes. 
+                            todas as suas ferramentas, desde o editor de código até aulas interativas.
+                            Aprenda no seu próprio ritmo, impulsione sua produtividade e domine o desenvolvimento web como nunca antes.
                             VueCode: onde a inovação e a praticidade se unem para revolucionar seu aprendizado.
-                            </p>
-                        </div>
-                        
-                        <div class="button-actionFuncionalidades">
-                            <button class="btn btn-action-funcionalidades">
-                                <i class="bi bi-arrow-right"></i>
-                                <span>Experimente o VueCode Agora</span>
-                            </button>
-                        </div>
-                        
+                        </p>
                     </div>
-                    <div class="img-esquerda">
-                        <div class="container-img-destaque1">
-                            <img src="../assets/img/apresentacao/imagem-destaque2.webp" class="img-destaques" alt="">
-                        </div>
-                    </div>
-                </div>
-                
-                
-            </div>
-            
-            <div class="container-funcionalidades funcionalidades2">                              
-                <div class="content-section">
-                    <div class="img-esquerda img-esquerda2">
-                        <div class="container-img-destaque2">
-                            <img src="../assets/img/apresentacao/imagem-destaque3.webp" class="img-destaques" alt="">
-                        </div>
-                    </div>
-                    <div class="text-direita content-textTopicos">
-                        <div class="title-call">
-                            <h2>Configure uma única vez!</h2>
-                        </div>
-                        <div class="description-funcionalidades">
-                            <p>
-                            Imagine um ambiente onde cada linha de código que você escreve ganha vida enquanto o instrutor explica, em tempo real, sem atrasos ou complicações. 
-                            Com nossa plataforma, vídeo e editor estão perfeitamente sincronizados — você pausa, testa, modifica e vê os resultados instantaneamente, tudo sem sair da tela.
-                            </p>
-                            
-                        </div>
-                        <div class="topicos-text">
-                            <ol class="topicos-description">                                
-                                <h3>Por que funciona?</h3>
-                                <li><strong>Código + Vídeo Integrados:</strong> Assista ao tutorial e pratique no mesmo espaço, sem abas extras ou janelas perdidas.</li>
-                                <li><strong>Feedback Imediato:</strong> Execute seu código com um clique e veja os resultados ao lado do vídeo, acelerando seu entendimento.</li>
-                                <li><strong>Zero Distrações:</strong> Foco total no que importa — sem configurar ambientes complexos ou perder tempo com setups tediosos.</li>
-                                <li><strong>No Seu Ritmo:</strong> Controle a velocidade, pause para experimentar e volte quando quiser, com tudo salvo automaticamente.</li>
-                                <li><strong>Interface Intuitiva:</strong> Design responsivo que se adapta ao seu fluxo de trabalho, seja no desktop ou no tablet.</li>                                                                
-                                <li><strong>Atualizações Constantes:</strong> Estamos sempre melhorando. Novos recursos e vídeos são adicionados regularmente, garantindo que você esteja sempre à frente.</li>
-                                <li><strong>Segurança e Privacidade:</strong> Seus dados e projetos estão seguros conosco. Utilizamos criptografia de ponta e práticas recomendadas de segurança para proteger suas informações.</li>
-                            </ol>
-                        </div>
-                        
-                        <div class="button-actionFuncionalidades">
-                            <button class="btn btn-action-funcionalidades">
-                                <i class="bi bi-arrow-right"></i>
-                                <span>Experimente o VueCode Agora</span>
-                            </button>
-                        </div>
-                        
-                    </div>
-                </div>
-                
-                
-            </div>
 
-            <div class="container-funcionalidades funcionalidades3">                              
-                <div class="content-section">
-                    
-                    <div class="text-direita content-textTopicos">
-                        <div class="title-call">
-                            <h2>Seu editor. Seu estilo.</h2>
-                        </div>
-                        <div class="description-funcionalidades">
-                            <p>
+                    <div class="button-actionFuncionalidades">
+                        <a href="#cadastro" class="btn btn-action-funcionalidades">
+                            <i class="bi bi-arrow-right"></i>
+                            <span>Experimente o VueCode Agora</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="img-esquerda">
+                    <div class="container-img-destaque1">
+                        <img src="../assets/img/apresentacao/imagem-destaque2.webp" class="img-destaques" alt="Recurso de edição de código do VueCode">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-funcionalidades funcionalidades2">
+            <div class="content-section">
+                <div class="img-esquerda img-esquerda2">
+                    <div class="container-img-destaque2">
+                        <img src="../assets/img/apresentacao/imagem-destaque3.webp" class="img-destaques" alt="Funcionalidade de sincronização de vídeo e editor">
+                    </div>
+                </div>
+                <div class="text-direita content-textTopicos">
+                    <div class="title-call">
+                        <h2>Configure uma única vez!</h2>
+                    </div>
+                    <div class="description-funcionalidades">
+                        <p>
+                            Imagine um ambiente onde cada linha de código que você escreve ganha vida enquanto o instrutor explica, em tempo real, sem atrasos ou complicações.
+                            Com nossa plataforma, vídeo e editor estão perfeitamente sincronizados — você pausa, testa, modifica e vê os resultados instantaneamente, tudo sem sair da tela.
+                        </p>
+                    </div>
+                    <div class="topicos-text">
+                        <ol class="topicos-description">
+                            <h3>Por que funciona?</h3>
+                            <li><strong>Código + Vídeo Integrados:</strong> Assista ao tutorial e pratique no mesmo espaço, sem abas extras ou janelas perdidas.</li>
+                            <li><strong>Feedback Imediato:</strong> Execute seu código com um clique e veja os resultados ao lado do vídeo, acelerando seu entendimento.</li>
+                            <li><strong>Zero Distrações:</strong> Foco total no que importa — sem configurar ambientes complexos ou perder tempo com setups tediosos.</li>
+                            <li><strong>No Seu Ritmo:</strong> Controle a velocidade, pause para experimentar e volte quando quiser, com tudo salvo automaticamente.</li>
+                            <li><strong>Interface Intuitiva:</strong> Design responsivo que se adapta ao seu fluxo de trabalho, seja no desktop ou no tablet.</li>
+                        </ol>
+                    </div>
+
+                    <div class="button-actionFuncionalidades">
+                        <a href="#cadastro" class="btn btn-action-funcionalidades">
+                            <i class="bi bi-arrow-right"></i>
+                            <span>Experimente o VueCode Agora</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-funcionalidades funcionalidades3">
+            <div class="content-section">
+                <div class="text-direita content-textTopicos">
+                    <div class="title-call">
+                        <h2>Seu editor. Seu estilo.</h2>
+                    </div>
+                    <div class="description-funcionalidades">
+                        <p>
                             No VueCode, o editor é totalmente personalizável:
                             troque temas, escolha a fonte, ajuste tamanhos e reorganize tudo como preferir.
                             Seu espaço de codar, do seu jeito.
-                            </p>
-                            
-                        </div>
-                        <div class="topicos-text">
-                            <ol class="topicos-description topicos-icon">                                
-                                <h3>Você personaliza:</h3>
-                                <li>
-                                    <span class="icon-topicos"><i class="bi bi-paint-bucket"></i></span>
-                                    Temas visuais: escolha entre os mais usados ou crie o seu.</li>
-                                <li>
-                                    <span class="icon-topicos"><i class="bi bi-type"></i></span>
-                                    Tipo e tamanho da fonte: foco total no conforto visual.
-                                
-                                </li>
-                                <li>
-                                    <span class="icon-topicos"><i class="bi bi-rulers"></i></span>
-                                    Espaçamento e altura de linha: edite por horas sem esforço.
-                                
-                                </li>
-                                <li>
-                                    <span class="icon-topicos"><i class="bi bi-window-stack"></i></span>
-                                    Layout flexível: mova, redimensione e oculte painéis como quiser.
-                                </li>
-                            </ol>
-                                <span class="frase-efeito">Crie o ambiente de codificação ideal pra você.
-                                        <strong>Sem distrações, sem limites.</strong></span>
-                        </div>
-                        
-                        <div class="button-actionFuncionalidades">
-                            <button class="btn btn-action-funcionalidades">
-                                <i class="bi bi-arrow-right"></i>
-                                <span>Experimente o VueCode Agora</span>
-                            </button>
-                        </div>
-                        
+                        </p>
+                    </div>
+                    <div class="topicos-text">
+                        <ol class="topicos-description topicos-icon">
+                            <h3>Você personaliza:</h3>
+                            <li>
+                                <span class="icon-topicos"><i class="bi bi-paint-bucket"></i></span>
+                                Temas visuais: escolha entre os mais usados ou crie o seu.
+                            </li>
+                            <li>
+                                <span class="icon-topicos"><i class="bi bi-type"></i></span>
+                                Tipo e tamanho da fonte: foco total no conforto visual.
+                            </li>
+                            <li>
+                                <span class="icon-topicos"><i class="bi bi-rulers"></i></span>
+                                Espaçamento e altura de linha: edite por horas sem esforço.
+                            </li>
+                            <li>
+                                <span class="icon-topicos"><i class="bi bi-window-stack"></i></span>
+                                Layout flexível: mova, redimensione e oculte painéis como quiser.
+                            </li>
+                        </ol>
+                        <span class="frase-efeito">Crie o ambiente de codificação ideal pra você.
+                            <strong>Sem distrações, sem limites.</strong></span>
                     </div>
 
-                    <div class="img-esquerda img-esquerda3">
-                        <div class="container-img-destaque3">
-                            <img src="../assets/img/apresentacao/personalizacao.webp" class="img-destaques" alt="">
-                        </div>
+                    <div class="button-actionFuncionalidades">
+                        <a href="#cadastro" class="btn btn-action-funcionalidades">
+                            <i class="bi bi-arrow-right"></i>
+                            <span>Experimente o VueCode Agora</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="img-esquerda img-esquerda3">
+                    <div class="container-img-destaque3">
+                        <img src="../assets/img/apresentacao/personalizacao.webp" class="img-destaques" alt="Funcionalidade de personalização do editor">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="about-section" id="sobre">
+        <div class="container-about">
+            <div class="title-section-about">
+                <h2>Sobre o VueCode</h2>
+            </div>
+            <div class="content-about">
+
+                <div class="img-esquerda-about">
+                    <div class="container-img-destaque4">
+                        <img src="../assets/img/apresentacao/imagem-destaque4.webp" class="img-destaques" alt="Interface do VueCode com edição de código e vídeo">
                     </div>
                 </div>
                 
+                <div class="content-text-about">
+                    <div class="title-section-about">
+                    <h3>Nossa Missão</h3>
+                </div>
+                <p>
+                    VueCode é uma plataforma web que combina edição de código HTML/CSS ao vivo com a 
+                    integração de vídeos (YouTube), oferecendo uma experiência única para quem aprende 
+                    e pratica front-end. O usuário pode escrever código, ver o resultado em tempo real
+                    e assistir a videoaulas simultaneamente — tudo em uma única interface responsiva e intuitiva.
+                </p>
+                </div>
                 
-            </div>            
-        </section>
+            </div>
+        </div>
+    </section>
 
-        <section class="depoimentos-section">
-            <div class="container-depoimentos">
-                <div class="grid-depoimentos">
-                    <div class="text-direitaDepo">
-                        <h3>Depoimentos</h3>
-                        <h1>O que nossos usuários dizem</h1>
-                    </div>
-                    <div class="slideshow-esquerda">
-                        <div class="slider-container">
-                            <div class="slider">
+    <section class="supported-languages" id="linguagens">
+        <div class="container-linguagens">
+            <h2>Linguagens Suportadas</h2>
+            <p class="section-description">Nosso editor interativo vai além de HTML e CSS, oferecendo suporte para uma vasta gama de linguagens de programação. Explore, experimente e aprenda com o destaque de sintaxe e recursos para:</p>
 
-                                <div class="slide1 slide active">
-                                    <span class="icon-coment">
-                                        <i class="bi bi-quote"></i>
-                                    </span>
-                                    <div class="comentario-text">
-                                        <strong>
-                                            "A experiência de utilização é incrível, tudo em um só lugar."
-                                        </strong>
-                                        
+            <div class="languages-grid">
+                <div class="language-item"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="language-item"><i class="bi bi-typescript"></i> TypeScript</div>
+                <div class="language-item"><i class="fab fa-python"></i> Python</div>
+                <div class="language-item"><i class="fas fa-hashtag"></i> C#</div>
+                <div class="language-item"><i class="fa-solid fa-c"></i> C++</div>
+                <div class="language-item"><i class="fab fa-html5"></i> HTML</div>
+                <div class="language-item"><i class="fab fa-java"></i> Java</div>
+                <div class="language-item"><i class="fas fa-code"></i> JSON</div>
+                <div class="language-item"><i class="fab fa-php"></i> PHP</div>
+                <div class="language-item"><i class="fab fa-markdown"></i> Markdown</div>
+                <div class="language-item"><i class="fab fa-windows"></i> PowerShell</div>
+                <div class="language-item"><i class="bi bi-filetype-yml"></i> YAML</div>
+            </div>
+            <p class="call-to-action">Comece a codificar na sua linguagem favorita agora!</p>
+        </div>
+    </section>
+
+    <section class="depoimentos-section" id="depoimentos">
+        <div class="container-depoimentos">
+            <div class="grid-depoimentos">
+                <div class="text-direitaDepo">
+                    <h3>Depoimentos</h3>
+                    <h1>O que nossos usuários dizem</h1>
+                </div>
+                <div class="slideshow-esquerda">
+                    <div class="slider-container">
+                        <div class="slider">
+
+                            <div class="slide1 slide active">
+                                <span class="icon-coment">
+                                    <i class="bi bi-quote"></i>
+                                </span>
+                                <div class="comentario-text">
+                                    <strong>
+                                        "A experiência de utilização é incrível, tudo em um só lugar."
+                                    </strong>
+                                </div>
+                                <div class="description-depoimentos">
+                                    <span>Conheça as vozes que constroem nossa comunidade e impulsionam o aprendizado coletivo.</span>
+                                </div>
+                                <div class="profile-area">
+                                    <div class="img-profile">
+                                        <img src="../assets/img/depoimentos-pessoas/depoimento-pessoa1.webp" alt="Foto de Luciana Silva">
                                     </div>
-                                    <div class="description-depoimentos">
-                                        <span>Conheça as vozes que constroem nossa comunidade e impulsionam o aprendizado coletivo.</span>
-                                    </div>
-                                    <div class="profile-area">
-                                        <div class="img-profile">
-                                            <img src="../assets/img/depoimentos-pessoas/depoimento-pessoa1.webp" alt="">
-                                        </div>
-                                        <div class="nome-profissao profile-name">
-                                            <span class="name-depoimento">Luciana Silva</span>
-                                            <span>Desenvolvedora Web</span>
-                                        </div>
+                                    <div class="nome-profissao profile-name">
+                                        <span class="name-depoimento">Luciana Silva</span>
+                                        <span>Desenvolvedora Web</span>
                                     </div>
                                 </div>
-
-                                <div class="slide2 slide">
-                                    <span class="icon-coment">
-                                        <i class="bi bi-quote"></i>
-                                    </span>
-                                    <div class="comentario-text">
-                                        <strong>
-                                            "A experiência de utilização é incrível, tudo em um só lugar."
-                                        </strong>
-                                        
-                                    </div>
-                                    <div class="description-depoimentos">
-                                        <span>Conheça as vozes que constroem nossa comunidade e impulsionam o aprendizado coletivo.</span>
-                                    </div>
-                                    <div class="profile-area">
-                                        <div class="img-profile">
-                                            <img src="../assets/img/depoimentos-pessoas/depoimento-pessoa2.webp" alt="">
-                                        </div>
-                                        <div class="nome-profissao profile-name">
-                                            <span class="name-depoimento">Sebastian Louis</span>
-                                            <span>Web Design na Amazon</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="slide3 slide">
-                                    <span class="icon-coment">
-                                        <i class="bi bi-quote"></i>
-                                    </span>
-                                    <div class="comentario-text">
-                                        <strong>
-                                            "A experiência de utilização é incrível, tudo em um só lugar."
-                                        </strong>
-                                        
-                                    </div>
-                                    <div class="description-depoimentos">
-                                        <span>Conheça as vozes que constroem nossa comunidade e impulsionam o aprendizado coletivo.</span>
-                                    </div>
-                                    <div class="profile-area">
-                                        <div class="img-profile">
-                                            <img src="../assets/img/depoimentos-pessoas/depoimento-pessoa3.webp" alt="">
-                                        </div>
-                                        <div class="nome-profissao profile-name">
-                                            <span class="name-depoimento">Mariana Fragoso</span>
-                                            <span>CEO CW-3H Desenvolvedora</span>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
-                            <div class="pagination">
-                                <span class="dot active" onclick="goToSlide(0)"></span>
-                                <span class="dot" onclick="goToSlide(1)"></span>
-                                <span class="dot" onclick="goToSlide(2)"></span>
+
+                            <div class="slide2 slide">
+                                <span class="icon-coment">
+                                    <i class="bi bi-quote"></i>
+                                </span>
+                                <div class="comentario-text">
+                                    <strong>
+                                        "A experiência de utilização é incrível, tudo em um só lugar."
+                                    </strong>
+                                </div>
+                                <div class="description-depoimentos">
+                                    <span>Conheça as vozes que constroem nossa comunidade e impulsionam o aprendizado coletivo.</span>
+                                </div>
+                                <div class="profile-area">
+                                    <div class="img-profile">
+                                        <img src="../assets/img/depoimentos-pessoas/depoimento-pessoa2.webp" alt="Foto de Sebastian Louis">
+                                    </div>
+                                    <div class="nome-profissao profile-name">
+                                        <span class="name-depoimento">Sebastian Louis</span>
+                                        <span>Web Design na Amazon</span>
+                                    </div>
+                                </div>
                             </div>
+
+                            <div class="slide3 slide">
+                                <span class="icon-coment">
+                                    <i class="bi bi-quote"></i>
+                                </span>
+                                <div class="comentario-text">
+                                    <strong>
+                                        "A experiência de utilização é incrível, tudo em um só lugar."
+                                    </strong>
+                                </div>
+                                <div class="description-depoimentos">
+                                    <span>Conheça as vozes que constroem nossa comunidade e impulsionam o aprendizado coletivo.</span>
+                                </div>
+                                <div class="profile-area">
+                                    <div class="img-profile">
+                                        <img src="../assets/img/depoimentos-pessoas/depoimento-pessoa3.webp" alt="Foto de Mariana Fragoso">
+                                    </div>
+                                    <div class="nome-profissao profile-name">
+                                        <span class="name-depoimento">Mariana Fragoso</span>
+                                        <span>CEO CW-3H Desenvolvedora</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="pagination">
+                            <span class="dot active" onclick="goToSlide(0)"></span>
+                            <span class="dot" onclick="goToSlide(1)"></span>
+                            <span class="dot" onclick="goToSlide(2)"></span>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-        </section>
-    </main>
+    <section class="faq-section" id="perguntas">
+        <div class="container-faq">
+            <h2>Perguntas Frequentes (FAQ)</h2>
+
+            <div class="faq-category">
+                <h3>Sobre a Plataforma</h3>
+                <div class="faq-item">
+                    <button class="faq-question">O que é esta plataforma?</button>
+                    <div class="faq-answer">
+                        <p>Esta é uma plataforma web interativa onde você pode <strong>praticar suas habilidades em HTML e CSS</strong>, ver suas <strong>mudanças em tempo real</strong> e <strong>aprender com videoaulas do YouTube</strong> diretamente na interface. Tudo foi projetado para ser simples e fácil de usar, construído apenas com HTML, CSS e JavaScript.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Para quem é esta plataforma?</button>
+                    <div class="faq-answer">
+                        <p>Esta plataforma é ideal para <strong>iniciantes</strong> que estão aprendendo HTML e CSS, <strong>desenvolvedores</strong> que querem praticar rapidamente, ou qualquer pessoa que busque um ambiente simples e direto para <strong>experimentar código front-end</strong>.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Preciso baixar ou instalar algo para usar?</button>
+                    <div class="faq-answer">
+                        <p>Não! Nossa plataforma é totalmente baseada na web. Você só precisa de um <strong>navegador de internet</strong> e uma conexão.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h3>Funcionalidades</h3>
+                <div class="faq-item">
+                    <button class="faq-question">Posso editar HTML e CSS simultaneamente?</button>
+                    <div class="faq-answer">
+                        <p>Sim! Você terá áreas separadas para editar seu código HTML e CSS, e as <strong>mudanças serão refletidas instantaneamente</strong> na pré-visualização ao lado.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Como funciona a visualização em tempo real?</button>
+                    <div class="faq-answer">
+                        <p>Enquanto você digita e modifica seu código HTML ou CSS, a área de pré-visualização é <strong>automaticamente atualizada</strong>, mostrando o resultado final do seu trabalho sem a necessidade de recarregar a página.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Como faço para assistir às videoaulas?</button>
+                    <div class="faq-answer">
+                        <p>Nossa plataforma integra um player do YouTube. Você poderá navegar por uma <strong>lista de videoaulas</strong> e assisti-las diretamente na interface, com <strong>controles de reprodução, pausa e avanço/retrocesso</strong>.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">As videoaulas são exclusivas da plataforma?</button>
+                    <div class="faq-answer">
+                        <p>Não. As videoaulas são hospedadas no YouTube, o que garante acesso a uma <strong>ampla variedade de conteúdo</strong> educacional sobre HTML, CSS e JavaScript. A plataforma apenas facilita a navegação e visualização dessas aulas em um ambiente integrado.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-category">
+                <h3>Suporte e Ajuda</h3>
+                <div class="faq-item">
+                    <button class="faq-question">Encontrei um problema ou erro. O que devo fazer?</button>
+                    <div class="faq-answer">
+                        <p>Se você encontrar qualquer problema, por favor, entre em contato conosco através do nosso formulário de contato (ou e-mail de suporte, se houver). Estamos sempre trabalhando para melhorar a plataforma!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Há planos para adicionar mais funcionalidades no futuro?</button>
+                    <div class="faq-answer">
+                        <p>Sim! Estamos constantemente avaliando o feedback dos usuários e temos planos de adicionar novas funcionalidades, como salvamento de projetos ou suporte a JavaScript na área de edição. Fique atento às atualizações!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+        <div class="contact-container">
+            <div class="contact-content">
+                <div class="contact-title">
+                    <h2>Entre em contato conosco</h2>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Nome" required>
+                        <input type="text" id="last-name" placeholder="Sobrenome" required>
+                        <input type="email" id="email" placeholder="E-mail" required>
+                        <textarea id="message" placeholder="Mensagem" required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="grid-footer">
+                <div class="logo-direita-footer">
+                    <img src="../assets/img/logo/branco-fundo-transparente.webp" alt="">
+                    
+                </div>
+                <div class="menu-meio-footer">
+                    <ul class="menu-footer">
+                        <li>
+                            <a href="./index.html">Início</a>
+                        </li>
+                        <li>
+                            <a href="#recursos">Recursos</a>
+                        </li>
+                        <li>
+                            <a href="#sobre">Sobre</a>
+                        </li>
+                        <li>
+                            <a href="#contato">Contato</a>
+                        </li>
+                    </ul>
+
+                    <div class="botao-cadastro">
+                        <button class="cadastro-button btn btn-primary" onclick="openRegisterModal()">
+                            <span>Fazer Cadastro</span>
+                        </button>
+                    </div>
+
+                </div>
+                <div class="endereco-esquerda-footer">
+                    <div class="adress-container">
+                        <span class="adress-rua">Rua Prates, 194 - Bom Retiro</span>
+                        <span class="adress-cidade">São Paulo - SP, 01121-000</span>
+                        <span class="tel-number">(11) 3456-7890</span>
+                    </div>
+
+                    <div class="link-sobre">
+                        <a href="#sobre">Sobre a VueCode</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="line-footer">
+                <hr>
+            </div>
+
+            <div class="line-social-footer">
+                <div class="lineGrid-container">
+                    <div class="termos-esquerda">
+                        <span><a href="">Termos de uso</a></span>
+                        <span><a href="">Política de Privacidade</a></span>
+                        <span><a href="">Política de Cookies</a></span>
+                    </div>
+                    <div class="social-direita">
+                        <span><a href="#"><i class="bi bi-facebook"></i></a></span>
+                        <span><a href="#"><i class="bi bi-instagram"></i></a></span>
+                        <span><a href="#"><i class="bi bi-linkedin"></i></a></span>
+                        <span><a href="#"><i class="bi bi-github"></i></a></span>
+                        <span><a href="#"><i class="bi bi-youtube"></i></a></span>
+                        <span><a href="#"><i class="bi bi-tiktok"></i></a></span>
+                    </div>
+                </div>
+
+                <div class="copy-footer">
+                    <div id="copyright" align="center">
+                        &copy;  2025 www.VueCode.com - All Rights Reserved.                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
     
 
 
