@@ -18,6 +18,27 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 
+    <!---------------Editor CodeMirror Embed------------------>
+
+    <!-- CSS do core e tema (aqui usando o “material” só de exemplo) -->
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css"
+        />
+
+        <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material.min.css"
+        />
+
+        <!-- JS do core + addons de modo HTML/CSS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>
+
+
 
 
     <!--------------------Fontes Poppins e Fire Sans Code----------------------------------->
@@ -75,14 +96,12 @@
     </header>
 
     <main class="main-workspace">
-        <section class="panel editor-panel">
-
+        <section class="panel editor-panel">            
             <div class="panel-editor-esquerda">
-
                 <div class="panel-navigation-esquerda panel-esquerda">
                     <nav class="panel-esquerda-navigation">
                         <ul class="panel-navigation">
-                            <li title="Explorador">
+                            <li title="Explorador" id="toggle-explorador">
                                 <i class="bi bi-copy"></i>
                                 <a href="#"></a>
                             </li>
@@ -130,13 +149,26 @@
                     </div>
                 </div>
 
-                <div class="explorador-esquerda panel-explorador panel-hide">
+                <div class="explorador-esquerda panel-explorador panel-hide oculto" id="painel-explorador">
                     <nav class="explorador-esquerda-menu">
-                        <ul>
-                            <li><a href="#">Editores Abertos</a></li>
-                            <li><a href="#">Project Name</a></li>
-                            <li><a href="#">Estrutura do Código</a></li>
-                            <li><a href="#">Linha do Tempo</a></li>
+                        <ul class="explorador-esquerda-list">
+                            <span>Explorador</span>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Editores Abertos</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Project Name</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Estrutura do Código</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#">Linha do Tempo</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -145,7 +177,132 @@
             
 
         </section>
+
+        <!-------------------Panel Editor Janelas-------------->
+
+        <section class="editor-area">
+            <div class="editor-container">
+                <div class="editor-header">
+                    <div class="editor-abas">
+                        <ul class="tabs">
+                            <li data-tab="html" class="active">HTML</li>
+                            <li data-tab="css">CSS</li>
+                            <li data-tab="js">JS</li>
+                        </ul>
+                    </div>
+                    <div class="code-options">
+                        <div class="code-preview-container" >
+                            <a href="" title="Preview" id="code-preview">
+                                <i class="bi bi-play-fill"></i>
+                            </a>
+                                                        
+                        </div>
+                        <div class="layout-container" >
+                            <a href="" title="Dividir Tela" id="layout">
+                                <i class="bi bi-layout-split"></i>
+                            </a>                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="editor-content">
+                    <div id="cm-html" class="editor-codemirror"></div>
+                    <div id="cm-css"  class="editor-codemirror"></div>
+                    <div id="cm-js"  class="editor-codemirror"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------Preview Editor -------------->
+
+        <section class="preview-editor">
+            <div class="preview-container">
+                <div class="preview-header">
+                    <span>Preview</span>
+                </div>
+                <div class="preview-content">
+                    <iframe src="" frameborder="0" class="preview-iframe"></iframe>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+
+
+
+    
+    
+    <script src="../js/editor.js"></script>
+
+    <script>
+        // Instâncias do CodeMirror
+        const cmHtml = CodeMirror(document.getElementById('cm-html'), {
+            mode: 'htmlmixed',
+            theme: 'material',
+            lineNumbers: true,
+        });
+
+        const cmCss = CodeMirror(document.getElementById('cm-css'), {
+            mode: 'css',
+            theme: 'material',
+            lineNumbers: true,
+        });
+
+        const cmJs = CodeMirror(document.getElementById('cm-js'), {
+            mode: 'javascript',
+            theme: 'material',
+            lineNumbers: true,
+        });
+
+        // Mapeamento das instâncias por linguagem
+        const cmInstances = {
+            html: cmHtml,
+            css: cmCss,
+            js: cmJs,
+        };
+
+        // Elementos visuais (wrappers dos editores)
+        const editors = {
+            html: cmHtml.getWrapperElement(),
+            css: cmCss.getWrapperElement(),
+            js: cmJs.getWrapperElement(),
+        };
+
+        const tabs = document.querySelectorAll('.tabs li');
+
+        function activateTab(tabEl) {
+            const target = tabEl.dataset.tab; // 'html', 'css' ou 'js'
+
+            // Alterna a aba ativa
+            tabs.forEach(t => t.classList.toggle('active', t === tabEl));
+
+            // Mostra/esconde editores e atualiza foco
+            Object.entries(editors).forEach(([key, editorEl]) => {
+            if (key === target) {
+                editorEl.style.display = 'block';
+                cmInstances[key].refresh();
+                cmInstances[key].focus(); // Cursor piscando garantido 💥
+            } else {
+                editorEl.style.display = 'none';
+            }
+            });
+        }
+
+        // Ativa troca de abas no clique
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => activateTab(tab));
+        });
+
+        // Ativa a primeira aba (ou a que já tiver classe 'active')
+        activateTab(document.querySelector('.tabs li.active') || tabs[0]);
+    </script>
+
+
+
+
+
+    <!----- Script Js ---- -->
+    
 </body>
 </html>

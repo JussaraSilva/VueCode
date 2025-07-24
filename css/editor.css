@@ -9,8 +9,11 @@
   /* Cores */
   --color-bg: #1e1e1e;
   --color-bg-panel: #252526;
+  --color-bg-panel-light: #2b2b2e;
+  --color-bg-header: #19191a;
   --color-panel-border: #3c3c3c;
   --color-text: #d4d4d4;
+  --color-icons: #7a7777;
   --color-accent: #569cd6;
   --color-accent-strong: #007acc;
 
@@ -80,7 +83,7 @@ button {
 }
 
 a {
-  color: var(--color-accent);
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -94,13 +97,20 @@ code, pre {
 
 /* Estilo para o Editor - Header Nav Menu */
 
+
+.main-workspace {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
 .top-bar {
   top: 0;
   left: 0;
   width: 100%;
   height: 80px;
   z-index: 9999;
-  background-color: var(--color-bg-panel);
+  background-color: var(--color-bg-header);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -186,25 +196,188 @@ code, pre {
     padding: var(--spacing-md);    
 }
 
+.editor-panel {
+  flex: 0.05 1 20px; /* cresce 0.05, encolhe 1, base de 50px */
+  box-sizing: border-box;
+}
+
 
 .panel-editor-esquerda {
     display: grid;
     grid-template-columns: 0.1fr 3fr;
-    margin-top: var(--spacing-sm);
-    padding: var(--spacing-sm);
 }
 
 .panel-navigation-esquerda {
-    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-bg-panel);
+    
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: var(--spacing-sm);
+    height: 100vh; /* altura total da tela */
 }
 
 .panel-navigation {
     border-radius: var(--border-radius);
-    
-    
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm); 
+    cursor: pointer;   
 }
 
 .panel-navigation li .bi {
     font-size: 1.5rem;
+    color: var(--color-icons);
+}
+
+.panel-navigation li .bi:hover {
     color: var(--color-text);
+}
+
+.panel-esquerda.config {
+  margin-top: auto; /* Joga pro fim da coluna */
+  font-size: 1.5rem;
+}
+
+.explorador-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    width: 15rem;
+    
+}
+
+.explorador-esquerda-list {
+    display: flex;
+    height: 100vh; /* altura total da tela */
+    font-size: var(--font-size-sm);
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: var(--color-bg-panel-light);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+#painel-explorador.oculto {
+  width: 0;
+  padding: 0;
+  border: none;
+  opacity: 0;
+}
+
+
+/* Editor Area */
+
+.editor-area {
+  flex: 2;
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.editor-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xs);
+    background-color: var(--color-bg-panel);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-sm);
+
+    
+}
+
+.tabs li {
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+
+    padding: var(--spacing-sm) var(--spacing-md); 
+    background-color: var(--color-bg-header);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    border: 1px solid var(--color-bg-panel-light);
+    text-align: center;
+    white-space: nowrap; 
+    &:hover {
+        background-color: var(--color-bg-panel-light); 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
+        transform: translateY(-2px); 
+    }
+    
+}
+
+
+.tabs li.active {
+    background-color: var(--color-bg-panel-light); 
+    color: var(--color-text-on-primary); 
+    font-weight: bold; 
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
+    border-bottom: 2px solid var(--color-text); 
+}
+
+
+
+.code-options {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-sm);
+    padding:var(--spacing-sm);
+}
+
+
+/* Editor Codemirror */
+.editor-content {
+    display: flex;
+    background-color: var(--color-bg-panel-light)!important;
+    flex-direction: row;
+    height: 100vh;
+    border: 1px solid #444;
+}
+
+.editor-codemirror {
+    max-width: 100%;
+}
+
+.cm-css {
+    width: 100%;
+    border-right: 1px solid #444
+}
+
+
+/* Mantém o border-box apenas para elementos críticos */
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber,
+.CodeMirror-sizer {
+  box-sizing: border-box !important;
+}
+
+.CodeMirror {
+  background-color: var(--color-bg-panel-light)!important;
+  height: 100%!important;
+  width: 100%!important;
+  
+}
+
+
+.CodeMirror-gutters {
+  background-color: var(--color-bg-panel-light)!important;
 }
