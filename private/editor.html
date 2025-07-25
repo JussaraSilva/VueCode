@@ -30,6 +30,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/javascript-hint.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closetag.min.js"></script>
+    <script src="codemirror/addon/edit/matchbrackets.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closebrackets.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/matchtags/matchtags.min.js"></script>
 
@@ -88,166 +89,176 @@
     </header>
 
     <main class="main-workspace">
-        <section class="panel editor-panel">            
-            <div class="panel-editor-esquerda">
-                <div class="panel-navigation-esquerda panel-esquerda">
-                    <nav class="panel-esquerda-navigation">
-                        <ul class="panel-navigation">
-                            <li title="Explorador" id="toggle-explorador">
-                                <i class="bi bi-copy"></i>
-                                <a href="#"></a>
-                            </li>
-                            <li title="Search">
-                                <i class="bi bi-search"></i>
-                                <a href="#"></a>
-                            </li>
-                            <li title="Controle de Código">
-                                <i class="bi bi-share"></i>
-                                <a href="#"></a>
-                            </li>
-                            <li title="Executar e Depurar">
-                                <i class="bi bi-play-fill"></i>
-                                <a href="#"></a>
-                            </li>
-                            <li title="Extensões">
-                                <i class="bi bi-stack"></i>
-                                <a href="#"></a>
-                            </li>
-                        </ul>
-                    </nav>
+    <section class="panel editor-panel">
+        <div class="panel-editor-esquerda">
+            <div class="panel-navigation-esquerda panel-esquerda">
+                <nav class="panel-esquerda-navigation">
+                    <ul class="panel-navigation">
+                        <li title="Explorador" id="toggle-explorador">
+                            <i class="bi bi-copy"></i>
+                            <a href="#"></a>
+                        </li>
+                        <li title="Search">
+                            <i class="bi bi-search"></i>
+                            <a href="#"></a>
+                        </li>
+                        <li title="Controle de Código">
+                            <i class="bi bi-share"></i>
+                            <a href="#"></a>
+                        </li>
+                        <li title="Executar e Depurar">
+                            <i class="bi bi-play-fill"></i>
+                            <a href="#"></a>
+                        </li>
+                        <li title="Extensões">
+                            <i class="bi bi-stack"></i>
+                            <a href="#"></a>
+                        </li>
+                    </ul>
+                </nav>
 
-                    <div class="panel-esquerda config">
-                        <ul>
-                            <li title="Configurações">
-                                <a href="">
-                                    <i class="bi bi-person-circle"></i>
-                                </a>
-                                
-                                
-                            </li>
-                            <li title="Configurações">
-                                <a href="">
-                                    <i class="bi bi-gear"></i>
-                                </a>
-                                
-                            </li>
-                            <li title="Ajuda">
-                                <a href="">
-                                    <i class="bi bi-question-circle"></i>
-                                </a>
-                                
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="explorador-esquerda panel-explorador panel-hide oculto" id="painel-explorador">
-                    <nav class="explorador-esquerda-menu">
-                        <ul class="explorador-esquerda-list">
-                            <span>Explorador</span>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <a href="#">Editores Abertos</a>
-                            </li>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <a href="#">Project Name</a>
-                            </li>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <a href="#">Estrutura do Código</a>
-                            </li>
-                            <li>
-                                <i class="bi bi-chevron-right"></i>
-                                <a href="#">Linha do Tempo</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                
-            </div>
-            
-
-        </section>
-
-        <!-------------------Panel Editor Janelas-------------->
-
-        <section class="editor-area">
-            <div class="editor-container">
-                <div class="editor-header">
-                    <div class="editor-abas">
-                        <ul class="tabs">
-                            <li data-tab="html" class="active">
-                                <i class="fa-brands fa-html5"></i>
-                                HTML
-                            </li>
-                            <li data-tab="css">
-                                <i class="fa-brands fa-css3-alt"></i>
-                                CSS
-                            </li>
-                            <li data-tab="js">
-                                <i class="fa-brands fa-js"></i>
-                                JS
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="code-options">
-                        <div class="code-preview-container" >
-                            <button id="btn-preview" class="btn-preview" type="button" title="Preview">
-                                <i class="bi bi-play-fill"></i>                                
-                            </button>
-                                
-                            
-                                                        
-                        </div>
-                        <div class="layout-container" >
-                            <a href="" title="Dividir Tela" id="layout">
-                                <i class="bi bi-layout-split"></i>
-                            </a>                            
-                        </div>
-                    </div>
-                </div>
-
-                <div class="editor-content">
-                    <div id="cm-html" class="editor-codemirror"></div>
-                    <div id="cm-css"  class="editor-codemirror"></div>
-                    <div id="cm-js"  class="editor-codemirror"></div>
+                <div class="panel-esquerda config">
+                    <ul>
+                        <li title="Configurações">
+                            <a href="">
+                                <i class="bi bi-person-circle"></i>
+                            </a>
+                        </li>
+                        <li title="Configurações">
+                            <a href="">
+                                <i class="bi bi-gear"></i>
+                            </a>
+                        </li>
+                        <li title="Ajuda">
+                            <a href="">
+                                <i class="bi bi-question-circle"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
 
-        <!-------------------Preview Editor -------------->
+            <div class="explorador-esquerda panel-explorador panel-hide oculto" id="painel-explorador">
+                <nav class="explorador-esquerda-menu">
+                    <ul class="explorador-esquerda-list">
+                        <span>Explorador</span>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="#">Editores Abertos</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="#">Project Name</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="#">Estrutura do Código</a>
+                        </li>
+                        <li>
+                            <i class="bi bi-chevron-right"></i>
+                            <a href="#">Linha do Tempo</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
 
-        <section class="preview-editor">
-            <div class="preview-container">
-                <div class="preview-header">
-                        <span>Preview</span>
-                    <button class="close-preview"id="close-preview">
-                        <i class="bi bi-x-lg" ></i>
+    <div class="content-right-wrapper">
+
+        <header class="main-header-tabs-buttons">
+            <div class="editor-abas">
+                <ul class="tabs">
+                    <li data-tab="html" class="active">
+                        <i class="fa-brands fa-html5"></i>
+                        HTML
+                    </li>
+                    <li data-tab="css">
+                        <i class="fa-brands fa-css3-alt"></i>
+                        CSS
+                    </li>
+                    <li data-tab="js">
+                        <i class="fa-brands fa-js"></i>
+                        JS
+                    </li>
+                </ul>
+            </div>
+            <div class="code-options">
+                <div class="code-preview-container">
+                    <button id="btn-preview" class="btn-preview" type="button" title="Preview">
+                        <i class="bi bi-play-fill"></i>
                     </button>
                 </div>
-                <div class="preview-content">
-                    <iframe  frameborder="0" class="preview-iframe"></iframe>
+                <div class="layout-container">
+                    <a href="" title="Dividir Tela" id="layout">
+                        <i class="bi bi-layout-split"></i>
+                    </a>
+                </div>
+                <div class="ativar-player">
+                    <button id="abrirPlayer" title="Abrir Player">
+                        <i class="bi bi-pip"></i>
+                    </button>
                 </div>
             </div>
-        </section>
+        </header>
 
+        <div class="editor-player-preview-area">
+            <section class="editor-area">
+                <div class="editor-content">
+                    <div id="cm-html" class="editor-codemirror"></div>
+                    <div id="cm-css" class="editor-codemirror"></div>
+                    <div id="cm-js" class="editor-codemirror"></div>
+                </div>
+            </section>
+
+            <div class="resizer-vertical" id="resizer"></div>
+
+            <div class="player-and-preview-container">
+                <section id="player-video" class="player-video oculto">
+                    <div class="video-input">
+                        <input type="text" id="video-url" placeholder="Cole a URL do vídeo ou chamada">
+                        <button id="carregar-video">Carregar</button>
+                    </div>
+                    <div class="video-container">
+                        <iframe id="video-frame" src="" allowfullscreen></iframe>
+                    </div>
+                    <div class="player-controls">
+                        <button id="voltar">
+                            <i class="bi bi-skip-backward-fill"></i>
+                        </button>
+                        <button id="play-pause">
+                            <i class="bi bi-play-fill" id="play-icon"></i>
+                            <i class="bi bi-pause-fill oculto" id="pause-icon"></i>
+                        </button>
+                        <button id="avancar">
+                            <i class="bi bi-skip-forward-fill"></i>
+                        </button>
+                        <button id="fechar" class="btn-close-video">❌</button>
+                    </div>
+                </section>
+
+                <section class="preview-editor">
+                    <div class="preview-container">
+                        <div class="preview-header">
+                            <span>Preview</span>
+                            <button class="close-preview" id="close-preview">
+                                <i class="bi bi-x-lg"></i>
+                            </button>
+                        </div>
+                        <div class="preview-content">
+                            <iframe frameborder="0" class="preview-iframe"></iframe>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
     </main>
 
-
-
-
-    
-    
+    <!----- Script Js ---- -->
     <script src="../js/editor.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closetag.min.js"></script>
-
-
-
-
-
-
-    <!----- Script Js ---- -->
     
 </body>
 </html>
